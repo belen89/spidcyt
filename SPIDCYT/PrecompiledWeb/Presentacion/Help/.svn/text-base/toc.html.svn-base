@@ -1,0 +1,473 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>Manual de Ayuda para el Usuario de SPIDCYT- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.8.0.560">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		var bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				}
+			
+			// Load search data
+			$.getScript("js/searchdata.js",	function() {
+				bSearchDataLoaded = true;
+			});
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				$("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId).activateSilently();
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt]][1]) + "</a></li>");
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Contents</a></li>
+			<li><a href="#tab-keywords">Index</a></li>
+			<li><a href="#tab-search">Search</a></li>
+			</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				<li class="folder" id="Introduccin" data="">
+							<a
+							href="Introduccin.html"
+							target="FrameMain">
+								Introducci&oacute;n</a>
+
+				<ul><li class="" id="Conocimientosprevios" data="">
+							<a
+							href="Conocimientosprevios.html"
+							target="FrameMain">
+								Conocimientos previos</a>
+
+				</li></ul></li><li class="" id="GlosarioDefinicionesAcrnimosyAbr" data="">
+							<a
+							href="GlosarioDefinicionesAcrnimosyAbr.html"
+							target="FrameMain">
+								Glosario: Definiciones, Acr&oacute;nimos y Abreviaturas.</a>
+
+				</li><li class="folder" id="DescripcindelSistema" data="">
+							<a
+							href="DescripcindelSistema.html"
+							target="FrameMain">
+								Descripci&oacute;n del Sistema</a>
+
+				<ul><li class="folder" id="Navegacin" data="">
+							<a
+							href="Navegacin.html"
+							target="FrameMain">
+								Navegaci&oacute;n</a>
+
+				<ul><li class="" id="Aspectosgeneralesdelsistema" data="">
+							<a
+							href="Aspectosgeneralesdelsistema.html"
+							target="FrameMain">
+								Aspectos generales del sistema</a>
+
+				</li><li class="" id="Nivelesdeusuariosypermisos" data="">
+							<a
+							href="Nivelesdeusuariosypermisos.html"
+							target="FrameMain">
+								Niveles de usuarios y permisos</a>
+
+				</li></ul></li><li class="folder" id="Funcionalidadaniveldeusuarios" data="">
+							<a
+							href="Funcionalidadaniveldeusuarios.html"
+							target="FrameMain">
+								Funcionalidad a nivel de usuarios:</a>
+
+				<ul><li class="folder" id="Funcionalidadgeneral" data="">
+							<a
+							href="Funcionalidadgeneral.html"
+							target="FrameMain">
+								Funcionalidad general</a>
+
+				<ul><li class="" id="PginadeBienvenida" data="">
+							<a
+							href="PginadeBienvenida.html"
+							target="FrameMain">
+								P&aacute;gina de Bienvenida</a>
+
+				</li><li class="" id="Iniciodesesin" data="">
+							<a
+							href="Iniciodesesin.html"
+							target="FrameMain">
+								Inicio de sesi&oacute;n</a>
+
+				</li><li class="" id="BsquedaAcadmica" data="">
+							<a
+							href="BsquedaAcadmica.html"
+							target="FrameMain">
+								B&uacute;squeda Acad&eacute;mica</a>
+
+				</li><li class="" id="BecariosRequeridos" data="">
+							<a
+							href="BecariosRequeridos.html"
+							target="FrameMain">
+								Becarios Requeridos</a>
+
+				</li><li class="" id="Otraspginascomunes" data="">
+							<a
+							href="Otraspginascomunes.html"
+							target="FrameMain">
+								Otras p&aacute;ginas comunes</a>
+
+				</li></ul></li><li class="folder" id="DirectordelaSecetara" data="">
+							<a
+							href="DirectordelaSecetara.html"
+							target="FrameMain">
+								Director de la Secetar&iacute;a</a>
+
+				<ul><li class="folder" id="Proyectos" data="">
+							<a
+							href="Proyectos.html"
+							target="FrameMain">
+								Proyectos</a>
+
+				<ul><li class="" id="Registracindeunproyecto" data="">
+							<a
+							href="Registracindeunproyecto.html"
+							target="FrameMain">
+								Registraci&oacute;n de un proyecto</a>
+
+				</li><li class="" id="Asignarpresupuesto" data="">
+							<a
+							href="Asignarpresupuesto.html"
+							target="FrameMain">
+								Asignar presupuesto</a>
+
+				</li><li class="" id="FinalizarProyecto" data="">
+							<a
+							href="FinalizarProyecto.html"
+							target="FrameMain">
+								Finalizar Proyecto</a>
+
+				</li></ul></li><li class="" id="InvestigadoresyBecarios" data="">
+							<a
+							href="InvestigadoresyBecarios.html"
+							target="FrameMain">
+								Investigadores y Becarios</a>
+
+				</li><li class="folder" id="Recursos" data="">
+							<a
+							href="Recursos.html"
+							target="FrameMain">
+								Recursos</a>
+
+				<ul><li class="" id="AsignacindeRecursos" data="">
+							<a
+							href="AsignacindeRecursos.html"
+							target="FrameMain">
+								Asignaci&oacute;n de Recursos</a>
+
+				</li></ul></li><li class="" id="TipoCategoraInvestigador" data="">
+							<a
+							href="TipoCategoraInvestigador.html"
+							target="FrameMain">
+								Tipo Categor&iacute;a Investigador</a>
+
+				</li><li class="" id="Congresos" data="">
+							<a
+							href="Congresos.html"
+							target="FrameMain">
+								Congresos</a>
+
+				</li><li class="" id="PronsticosdelaSecretara" data="">
+							<a
+							href="PronsticosdelaSecretara.html"
+							target="FrameMain">
+								Pron&oacute;sticos de la Secretar&iacute;a</a>
+
+				</li><li class="" id="TendenciasenlosProyectosdeInvest" data="">
+							<a
+							href="TendenciasenlosProyectosdeInvest.html"
+							target="FrameMain">
+								Tendencias en los Proyectos de Investigaci&oacute;n</a>
+
+				</li><li class="" id="DescargadeReportes" data="">
+							<a
+							href="DescargadeReportes.html"
+							target="FrameMain">
+								Descarga de Reportes</a>
+
+				</li><li class="" id="InvestigadoresporCategora" data="">
+							<a
+							href="InvestigadoresporCategora.html"
+							target="FrameMain">
+								Investigadores por Categor&iacute;a</a>
+
+				</li><li class="" id="ActividaddelosUsuarios" data="">
+							<a
+							href="ActividaddelosUsuarios.html"
+							target="FrameMain">
+								Actividad de los Usuarios</a>
+
+				</li><li class="" id="ListadeCorreos" data="">
+							<a
+							href="ListadeCorreos.html"
+							target="FrameMain">
+								Lista de Correos</a>
+
+				</li></ul></li><li class="folder" id="DirectordeProyecto" data="">
+							<a
+							href="DirectordeProyecto.html"
+							target="FrameMain">
+								Director de Proyecto</a>
+
+				<ul><li class="" id="VerActividadesdeBecarios" data="">
+							<a
+							href="VerActividadesdeBecarios.html"
+							target="FrameMain">
+								Ver Actividades de Becarios</a>
+
+				</li></ul></li><li class="folder" id="Investigador" data="">
+							<a
+							href="Investigador.html"
+							target="FrameMain">
+								Investigador</a>
+
+				<ul><li class="" id="PerfildeInvestigador" data="">
+							<a
+							href="PerfildeInvestigador.html"
+							target="FrameMain">
+								Perfil de Investigador</a>
+
+				</li><li class="" id="PerfildeProyectos" data="">
+							<a
+							href="PerfildeProyectos.html"
+							target="FrameMain">
+								Perfil de Proyectos</a>
+
+				</li><li class="" id="Viticos" data="">
+							<a
+							href="Viticos.html"
+							target="FrameMain">
+								Vi&aacute;ticos</a>
+
+				</li><li class="" id="DefinirRequerimientodeBecarios" data="">
+							<a
+							href="DefinirRequerimientodeBecarios.html"
+							target="FrameMain">
+								Definir Requerimiento de Becarios</a>
+
+				</li></ul></li><li class="folder" id="Becario" data="">
+							<a
+							href="Becario.html"
+							target="FrameMain">
+								Becario</a>
+
+				<ul><li class="" id="Bitcoradebecario" data="">
+							<a
+							href="Bitcoradebecario.html"
+							target="FrameMain">
+								Bit&aacute;cora de becario</a>
+
+				</li></ul></li></ul></li><li class="" id="LogdeAuditora" data="">
+							<a
+							href="LogdeAuditora.html"
+							target="FrameMain">
+								Log de Auditor&iacute;a</a>
+
+				</li></ul></li></ul>
+		</div>
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				</ul>
+		</div>
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		</div>
+    
+</body>
+
+</html>
+

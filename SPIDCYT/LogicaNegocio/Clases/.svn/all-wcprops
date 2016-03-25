@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/897/trunk/src/SPIDCYT/LogicaNegocio/Clases
+END
+Viatico.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/815/trunk/src/SPIDCYT/LogicaNegocio/Clases/Viatico.cs
+END
+Investigador.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/883/trunk/src/SPIDCYT/LogicaNegocio/Clases/Investigador.cs
+END
+Presupuesto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/813/trunk/src/SPIDCYT/LogicaNegocio/Clases/Presupuesto.cs
+END
+EstadoViatico.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/812/trunk/src/SPIDCYT/LogicaNegocio/Clases/EstadoViatico.cs
+END
+Producto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/813/trunk/src/SPIDCYT/LogicaNegocio/Clases/Producto.cs
+END
+TipoProyecto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/643/trunk/src/SPIDCYT/LogicaNegocio/Clases/TipoProyecto.cs
+END
+TipoBecario.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/643/trunk/src/SPIDCYT/LogicaNegocio/Clases/TipoBecario.cs
+END
+ProyectoCategorizado.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/883/trunk/src/SPIDCYT/LogicaNegocio/Clases/ProyectoCategorizado.cs
+END
+RequerimientosBecario.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/813/trunk/src/SPIDCYT/LogicaNegocio/Clases/RequerimientosBecario.cs
+END
+Hito.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/812/trunk/src/SPIDCYT/LogicaNegocio/Clases/Hito.cs
+END
+Proyecto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/883/trunk/src/SPIDCYT/LogicaNegocio/Clases/Proyecto.cs
+END
+AreaDeInvestigacion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/643/trunk/src/SPIDCYT/LogicaNegocio/Clases/AreaDeInvestigacion.cs
+END
+EstadoProyecto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/663/trunk/src/SPIDCYT/LogicaNegocio/Clases/EstadoProyecto.cs
+END
+Becario.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/880/trunk/src/SPIDCYT/LogicaNegocio/Clases/Becario.cs
+END
+Persona.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/878/trunk/src/SPIDCYT/LogicaNegocio/Clases/Persona.cs
+END
+TipoCategoriaInvestigador.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/883/trunk/src/SPIDCYT/LogicaNegocio/Clases/TipoCategoriaInvestigador.cs
+END
+Insumo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/813/trunk/src/SPIDCYT/LogicaNegocio/Clases/Insumo.cs
+END
+Gasto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/812/trunk/src/SPIDCYT/LogicaNegocio/Clases/Gasto.cs
+END
+HistorialEstadoViatico.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/812/trunk/src/SPIDCYT/LogicaNegocio/Clases/HistorialEstadoViatico.cs
+END
+CategoriaInvestigador.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/883/trunk/src/SPIDCYT/LogicaNegocio/Clases/CategoriaInvestigador.cs
+END
+HistorialCategoria.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/643/trunk/src/SPIDCYT/LogicaNegocio/Clases/HistorialCategoria.cs
+END
+Mensaje.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/813/trunk/src/SPIDCYT/LogicaNegocio/Clases/Mensaje.cs
+END
+Usuario.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/815/trunk/src/SPIDCYT/LogicaNegocio/Clases/Usuario.cs
+END
+Tablero.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/815/trunk/src/SPIDCYT/LogicaNegocio/Clases/Tablero.cs
+END
+Tendencia.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/815/trunk/src/SPIDCYT/LogicaNegocio/Clases/Tendencia.cs
+END
+Investigador.cs.bak
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/341/trunk/src/SPIDCYT/LogicaNegocio/Clases/Investigador.cs.bak
+END
+Diagrama de Clases.cd
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/883/trunk/src/SPIDCYT/LogicaNegocio/Clases/Diagrama%20de%20Clases.cd
+END
+TipoProducto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/815/trunk/src/SPIDCYT/LogicaNegocio/Clases/TipoProducto.cs
+END

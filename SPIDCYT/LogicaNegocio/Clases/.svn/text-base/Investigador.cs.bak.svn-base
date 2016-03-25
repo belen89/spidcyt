@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class Investigador : Persona
+{
+
+        
+
+        private CategoriaInvestigador categoriaUTN;
+        private CategoriaInvestigador categoriaConicet;
+        private List<HistorialCategoria> historialCategoria;
+
+
+        public List<HistorialCategoria> HISTORIALCATEGORIA
+        {
+            get { return historialCategoria; }
+            set { historialCategoria = value; }
+        }
+        public CategoriaInvestigador CATEGORIAUTN
+        {
+            get { return categoriaUTN; }
+            set { categoriaUTN = value; }
+        }
+        public CategoriaInvestigador CATEGORIACONICET
+        {
+            get { return categoriaConicet; }
+            set { categoriaConicet = value; }
+        }
+
+        public static Investigador getInvestigador(int idInvestigador)
+        {
+            return DAOInvestigador.get(idInvestigador);
+        }
+    
+}
+

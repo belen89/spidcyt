@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="AreaDeInvestigacion" Collapsed="true">
+    <Position X="11.5" Y="8.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgACAAAAAAAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Clases\AreaDeInvestigacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipoProyecto" Collapsed="true">
+    <Position X="14.75" Y="10.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAgACAAAEAAAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Clases\TipoProyecto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Becario" Collapsed="true">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAABAYAEAAIIABAAAAAAIQAAQ=</HashCode>
+      <FileName>Clases\Becario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TIPOBECARIO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CategoriaInvestigador" Collapsed="true">
+    <Position X="7.25" Y="2.75" Width="1.75" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Property Name="ID" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAhAggEAAAgACAAAAAAEAAAIAAAAAAAAAAAAAACgQ=</HashCode>
+      <FileName>Clases\CategoriaInvestigador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TIPO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EstadoProyecto" Collapsed="true">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAgACAAAEAAAAAAIAAAAAAgAAAAAAAAgA=</HashCode>
+      <FileName>Clases\EstadoProyecto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HabilidadesTecnicas" Collapsed="true">
+    <Position X="8" Y="10.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABQAAAAAAgAAAAAEAQEAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Clases\HabilidadesTecnicas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HistorialCategoria" Collapsed="true">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAIAAgAAAAAAAAAACAIAAAACAAAAAA=</HashCode>
+      <FileName>Clases\HistorialCategoria.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CATEGORIAINVESTIGADOR" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hito" Collapsed="true">
+    <Position X="13.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQkAACAIgQCCCAEAQAAEAIAEAIgAIIAAIAEAggQ=</HashCode>
+      <FileName>Clases\Hito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Investigador" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CBAgAACAGgBAACAAAAAAhDAoAggAMAAJACAAABAAAAQ=</HashCode>
+      <FileName>Clases\Investigador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CATEGORIAUTN" />
+      <Property Name="CATEGORIANACIONAL" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="HISTORIALCATEGORIA" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mensaje" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQgAAAAAgkAAAAEAQAAAAAAgAgAAAAIAAIAAAgA=</HashCode>
+      <FileName>Clases\Mensaje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Persona" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Property Name="ID" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAgACAgEEAAAAAAIRAAASAwAAAAAAAA4M=</HashCode>
+      <FileName>Clases\Persona.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="USUARIO" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Producto" Collapsed="true">
+    <Position X="11.75" Y="10.75" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Property Name="ID" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAFQAAAAIAgAACAAEAQGAAAAAEAAAAAAAAEIAAAkQ=</HashCode>
+      <FileName>Clases\Producto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TIPO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Proyecto" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Property Name="ID" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QpIEAAhAiQBQhkUAAIADwABwECEAYiAAEHAsoCAkAwQ=</HashCode>
+      <FileName>Clases\Proyecto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DIRECTOR" />
+      <Property Name="ESTADOPROYECTO" />
+      <Property Name="AREASDEINVESTIGACION" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CODIRECTORES" />
+      <Property Name="BECARIOS" />
+      <Property Name="PRODUCTOS" />
+      <Property Name="PROYECTOCATEGORIZADO" />
+      <Property Name="INVESTIGADORES" />
+      <Property Name="REQUERIMIENTOBECARIOS" />
+      <Property Name="HITOS" />
+      <Property Name="TABLERO" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProyectoCategorizado" Collapsed="true">
+    <Position X="14.5" Y="8.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAACAAAAAAAAABAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\ProyectoCategorizado.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TIPOPROYECTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Recurso">
+    <Position X="25" Y="1" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQBQAAAQAAgECAAAEAREAAAIAAAACIQAAAASAAA5A=</HashCode>
+      <FileName>Clases\Recursos\Recurso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ESTADOACTUAL" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="HISTORIAL" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="RequerimientosBecario" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="2" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Property Name="ID" Hidden="true" />
+      <Field Name="proyecto" Hidden="true" />
+      <Property Name="PROYECTO" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAIQAAABAIgEJAAAEAQAAAAAAAAIAAAAAAAJAAggA=</HashCode>
+      <FileName>Clases\RequerimientosBecario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="habilidadesTecnicas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TipoBecario" Collapsed="true">
+    <Position X="9" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAgACAAAEAAAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Clases\TipoBecario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipoCategoriaInvestigador" Collapsed="true">
+    <Position X="4" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQgAEAAAgACAAAEAAAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Clases\TipoCategoriaInvestigador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipoProducto" Collapsed="true">
+    <Position X="11.75" Y="12.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgACAAAAAQAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Clases\TipoProducto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tablero" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>Clases\Tablero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Mensaje" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Usuario" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAQAAAgAAAAAAAAAAAAAAAgAAAAAAAAAWABAA=</HashCode>
+      <FileName>Clases\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConDemora">
+    <Position X="20.5" Y="5.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAQAA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\ConDemora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OcupadoConReserva">
+    <Position X="19.75" Y="8.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\OcupadoConReserva.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeBaja">
+    <Position X="23.25" Y="8.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\DeBaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disponible">
+    <Position X="29.5" Y="5.5" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\Disponible.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnReserva">
+    <Position X="17" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\EnReserva.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IEstadoRecurso" Collapsed="true">
+    <Position X="21.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAQAAQAAAgACAAUEAQAAAgIAAAAAAEAAAACAAYgA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\IEstadoRecurso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ocupado">
+    <Position X="24.25" Y="5.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAEAAAAAAAAAAAAAIAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Clases\Recursos\EstadoRecurso\Ocupado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecursoEnProyecto">
+    <Position X="29.5" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgAAAAQAAEBAAAACAAAAMgwAACAAAAgA=</HashCode>
+      <FileName>Clases\Recursos\RecursoEnProyecto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RECURSO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HistorialDeRecurso">
+    <Position X="19.25" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAgAAIAAAAAAAAAAAAAIAIAAAACAAAggA=</HashCode>
+      <FileName>Clases\Recursos\HistorialDeRecurso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PROYECTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

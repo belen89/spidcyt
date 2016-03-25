@@ -1,0 +1,31 @@
+Log.e, Log.d (como system.out.print) para logging de error
+siemre llamar al Super. cuando se implmentan los metodos del ciclo de vida del activity
+
+******************************************
+Activity:
+
++onCreate: se invoca 1 sola vez
++onPause: cuando la app pierde foco (guardar ultimo estado)
++onResume: cuando toma foco (volver a obtener estado)
+onDestroy: usado en casos excepcionales. normalmente no deberia tener mplementacion
+
+onStart:
+onStop:
+
+******************************************
+
+View<-->viewGroup--->Layout
+
+
+View: clase base para todos los widgets
+
+Widget: componentes graficos (combos, etc)
+
+Viewgroup: container.. 
+
+Layout: recurso externo (res/Layout)
+
+Class R: acceso a punteros de recursos, se crea en tiempo de compilacion (gen/R.java)
+
+LAYOUT xml: LinearLayout: es relativo.. android:layout_width="fill_parent" (llenar espacio) 
+					android:layout_height="wrap_content" (lo que necesito para mostrar el contenido)

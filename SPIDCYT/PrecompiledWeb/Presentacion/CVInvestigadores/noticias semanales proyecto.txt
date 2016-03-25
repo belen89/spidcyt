@@ -1,0 +1,27 @@
+ALTER procedure [dbo].[noticiasSemanalesProyecto]
+	@idProyecto int
+as
+Select per.nombre +' '+ per.apellido as 'Nombre', 'Investigador' as 'Tipo', ip.fechaInicio as 'fecha'
+from Proyecto p, InvestigadorPorProyecto ip, Persona per
+where p.idProyecto=ip.idProyecto and ip.idInvestigador=per.idPersona and ip.fechaInicio between GETDATE()-8 and GETDATE()+1 and p.idProyecto=@idProyecto
+union
+Select per.nombre +' '+ per.apellido as 'Nombre', 'Codirector' as 'Tipo', cp.fechaInicio as 'fecha'
+from Proyecto p, CodirectorPorProyecto cp, Persona per
+where p.idProyecto=cp.idProyecto and cp.idInvestigador=per.idPersona and cp.fechaInicio between GETDATE()-8 and GETDATE()+1 and p.idProyecto=@idProyecto
+union
+Select per.nombre +' '+ per.apellido as 'Nombre', 'Becario' as 'Tipo', bp.fechaInicio as 'fecha'
+from Proyecto p, BecarioPorProyecto bp, Persona per
+where p.idProyecto=bp.idProyecto and bp.idBecario=per.idPersona and bp.fechaInicio between GETDATE()-8 and GETDATE()+1 and p.idProyecto=@idProyecto
+union
+Select prod.titulo + ' [' + t.nombre + ']' as 'Nombre', 'Producto ' as 'Tipo', prod.fechaPublicacion as 'fecha'
+from Proyecto p, Producto prod, TipoProducto t
+where p.idProyecto=prod.proyecto and prod.tipo=t.idTipoProducto and prod.fechaPublicacion between GETDATE()-8 and GETDATE()+1 and p.idProyecto=@idProyecto
+union 
+Select 'Nuevo '  as 'Nombre', 'Mensaje ' as 'Tipo', m.fechaPublicacion as 'fecha'
+from Proyecto p, Mensaje m, Tablero t
+where p.idProyecto=t.idProyecto and m.idTablero=t.idTablero and m.fechaPublicacion between GETDATE()-8 and GETDATE()+1 and p.idProyecto=@idProyecto
+union 
+Select h.nombre as 'Nombre', 'Hito ' as 'Tipo', h.fechaSubida as 'fecha'
+from Proyecto p,Hitos h
+where p.idProyecto=h.idProyecto and h.fechaSubida between GETDATE()-8 and GETDATE()+1 and p.idProyecto=@idProyecto
+order by fecha desc

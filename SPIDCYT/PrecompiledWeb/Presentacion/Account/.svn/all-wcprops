@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/893/trunk/src/SPIDCYT/PrecompiledWeb/Presentacion/Account
+END
+Web.config
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/888/trunk/src/SPIDCYT/PrecompiledWeb/Presentacion/Account/Web.config
+END
+Login.aspx
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/893/trunk/src/SPIDCYT/PrecompiledWeb/Presentacion/Account/Login.aspx
+END
+ChangePassword.aspx
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/893/trunk/src/SPIDCYT/PrecompiledWeb/Presentacion/Account/ChangePassword.aspx
+END
+ChangePasswordSuccess.aspx
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/893/trunk/src/SPIDCYT/PrecompiledWeb/Presentacion/Account/ChangePasswordSuccess.aspx
+END
+Register.aspx
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/893/trunk/src/SPIDCYT/PrecompiledWeb/Presentacion/Account/Register.aspx
+END

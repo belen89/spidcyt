@@ -1,0 +1,36 @@
+* informe preliminar: ampliar la metodologia de trabajo 
+* factibilidad tiene que ser de todo, el neustro es de pre factibildiad... (ordenarlo en la aprte del proyecto)
+* planificar y metodologia (1ro metodologia, 2do planificacion) 
+* averiguar area de I+D 
+* descripción de categorias conicet (ver la numeración)
+* diagrama de despliegue 
+* Planificación --> hacer hasta finalizar el cronograma.- 
+
+EXPOSICIÓN:
+de lo general a lo aprticualar, vender la idea proyecto --> como si fuera a los gerentes 
+30 minutos 
+seleccion de contenidos
+introducir al contexto y la problematica, la necesidad, el escenario y componentes. Objetivos, alcances. 
+Alcances, destacar lo mas relevantes. Destacar lo particular.
+Metodología de trabajo --> la estrategia.
+Herramientas y tecnologias. 
+cual es la estrategia y como avanzamos
+ppt - presi
+
+WBS
+agregar una rama con el analisis diseño, testing ...etc (SOPORTE)
+producto abarco todos los demas niveles! 
+INVESTIGACION puede ir como en otro modulo--> otro subsistema 
+entorno de desarrollo disponible para la utilizacion 
+capacitacion puede ser al final 
+presentacion 
+poner: "MODULO" INVESTIGADOR 
+
+gestion del tiempo
+ver cada modulo--> definir en forma logica las tareas identificar as actividades las tareas, y esas tareas se relacionan en forma logica
+identificando relaciones de presedencia. Una red ---> PERT (estimacion) o POKER ESTIMATION.-y los recursos :) 
+Definir responsable por cada iteracion, de hacer el seguimiento, el srcum master. Que vaya rotando. 
+para mejor la estimacion, basarnos en el otro spring. 
+
+PLANILLAS DE SEGUIMIENTO
+* el seguimiento dividirlo en actividades de desarrollo y gestion 

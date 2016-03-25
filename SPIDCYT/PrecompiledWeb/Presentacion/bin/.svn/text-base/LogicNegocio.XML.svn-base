@@ -1,0 +1,1364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogicNegocio</name>
+    </assembly>
+    <members>
+        <member name="T:TipoProyecto">
+            <summary>
+            Representa un tipo de categoría de un Proyecto de Investigación:
+            Categorías:
+            # UTN
+            # Con Incentivo
+            # Incubado
+            </summary>
+        </member>
+        <member name="M:TipoProyecto.esIncubado">
+            <summary>
+            Determina si es Incubado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TipoProyecto.esUTN">
+            <summary>
+            Determina si es UTN
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TipoProyecto.esConIncentivo">
+            <summary>
+            Determina si es Con Incentivo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ProyectoCategorizado">
+            <summary>
+            Representa una Categoría del Proyecto y su Número de Referencia Asociado.
+            Un Proyecto puede tener categoría CONICET, UTN o ser Incubado. 
+            Ejemplo:
+            Con Incentivo -> Nro Referencia: 25/E128
+            UTN -> Nro Referencia: EIINCO773
+            
+            </summary>
+        </member>
+        <member name="M:ProyectoCategorizado.esIncubado">
+            <summary>
+            Determina si el Proyecto es Incubado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProyectoCategorizado.esUTN">
+            <summary>
+            Determina si el Proyecto es UTN
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProyectoCategorizado.esConIncentivo">
+            <summary>
+            Determina si el Proyecto es Con Incentivo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CategoriaInvestigador">
+            <summary>
+            Representa la Categoría de un Investigador.
+            Categorías UTN: A B C D E F G
+            Categorías Conicet: 5 4 3 2 1
+            </summary>
+        </member>
+        <member name="M:CategoriaInvestigador.getCategoria(System.Int32)">
+            <summary>
+            Obtiene una Categoría según el ID pasado por parámetro
+            </summary>
+            <param name="idCategoria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CategoriaInvestigador.habilitaDireccionDeProyectos">
+            <summary>
+            Determina si la Categoría habilita a un Investigador a ser director de Proyectos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CategoriaInvestigador.habilitaAsesorCientifico">
+            <summary>
+            Determina si la Categoría habilita a un Investigador a ser Asesor Científico.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CategoriaInvestigador.habilitaDireccionDeProyectosConAsesorCientífico">
+            <summary>
+            Determina si la Categoría habilita a un Investigador a ser Director de Proyecto con la condición
+            de tener un asesor científico.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CategoriaInvestigador.esConicet">
+            <summary>
+            Determina si esta es una categoría del Conicet.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CategoriaInvestigador.esUTN">
+            <summary>
+            Determina es una categoría UTN.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CategoriaInvestigador.estaEnUso(System.Int32)">
+            <summary>
+            Determina si la Categoría está en uso.
+            Para validar que no se eliminen Categorias usadas por Investigadores
+            </summary>
+            <param name="idCategoriaInvestigador"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RequerimientosBecario">
+            <summary>
+            Representa requerimientos para la postulación de un becario
+            </summary>
+        </member>
+        <member name="M:RequerimientosBecario.insertarRequerimientosBecario(RequerimientosBecario)">
+            <summary>
+            Crea un nuevo requerimiento de becario
+            </summary>
+            <param name="requerimientosBecario"></param>
+        </member>
+        <member name="M:RequerimientosBecario.get(System.Int32)">
+            <summary>
+            Obtiene un Requerimiento de becario
+            </summary>
+            <param name="idRequerimientosBecario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RequerimientosBecario.eliminarRequerimientosBecario(System.Int32)">
+            <summary>
+            Elimina un requerimiento de becario
+            </summary>
+            <param name="idRequerimientosBecario"></param>
+        </member>
+        <member name="M:RequerimientosBecario.actualizarRequerimientosBecario(RequerimientosBecario)">
+            <summary>
+            Edita un requerimiento de becario
+            </summary>
+            <param name="requerimientosBecario"></param>
+        </member>
+        <member name="T:Proyecto">
+            <summary>
+            Representa un Proyecto de Investigación.
+            </summary>
+        </member>
+        <member name="M:Proyecto.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="M:Proyecto.guardar(Proyecto)">
+            <summary>
+            Guarda un Proyecto en la Base de Datos.
+            </summary>
+            <param name="proyecto"></param>
+        </member>
+        <member name="M:Proyecto.get(System.Int32)">
+            <summary>
+            Obtiene un Proyecto de la Base de Datos dependiendo del Id pasado por Parámetro.
+            </summary>
+            <param name="idProyecto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.obtenerProyectosDelUsuario(System.String)">
+            <summary>
+            Obtiene una Lista de todos los Proyectos del Usuario pasado por parámetro
+            (No debería ser un Método en la clase Usuario?)
+            </summary>
+            <param name="nombreUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.obtenerTablero(System.Int32)">
+            <summary>
+            Obtiene el Objeto Tablero asociado al Proyecto.
+            </summary>
+            <param name="idProyecto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.System#IEquatable{Proyecto}#Equals(Proyecto)">
+            <summary>
+            Compara el objeto con otro Proyecto pasado por parámetro para determinar su igualdad.
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.insertar">
+            <summary>
+            Inserta el Objeto Proyecto en la Base de Datos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.modificar">
+            <summary>
+            Modifica el Objeto Proyecto en la Base de Datos.
+            </summary>
+        </member>
+        <member name="M:Proyecto.agregarCoDirector(Investigador,System.DateTime)">
+            <summary>
+            Agrega un Co-Director con su Fecha de Alta al Proyecto.
+            </summary>
+            <param name="coDirectorAInsertar"></param>
+            <param name="fechaAlta"></param>
+        </member>
+        <member name="M:Proyecto.agregarInvestigador(Investigador,System.DateTime)">
+            <summary>
+            Agrega un Investigador con su Fecha de Alta al Proyecto.
+            </summary>
+            <param name="investigadorAInsertar"></param>
+            <param name="fechaAlta"></param>
+        </member>
+        <member name="M:Proyecto.agregarBecario(Becario,System.DateTime)">
+            <summary>
+            Agrega un Becario con su Fecha de Alta al Proyecto.
+            </summary>
+            <param name="becarioAInsertar"></param>
+            <param name="fechaAlta"></param>
+        </member>
+        <member name="M:Proyecto.darDeBajaCoDirector(Investigador,System.DateTime)">
+            <summary>
+            Da de baja a un Co-Director del Proyecto con su Fecha de Baja correspondiente.
+            </summary>
+            <param name="coDirectorADarDeBaja"></param>
+            <param name="fechaBaja"></param>
+        </member>
+        <member name="M:Proyecto.darDeBajaInvestigador(Investigador,System.DateTime)">
+            <summary>
+            Da de baja a un Investigador del Proyecto con su Fecha de Baja correspondiente.
+            </summary>
+            <param name="investigadorADarDeBaja"></param>
+            <param name="fechaBaja"></param>
+        </member>
+        <member name="M:Proyecto.darDeBajaBecario(Becario,System.DateTime)">
+            <summary>
+            Da de baja a un Becario del Proyecto con su Fecha de Baja correspondiente.
+            </summary>
+            <param name="becarioADarDeBaja"></param>
+            <param name="fechaBaja"></param>
+        </member>
+        <member name="M:Proyecto.esInvestigadorDelProyecto(Investigador)">
+            <summary>
+            Determina si un Investigador pasado por parámetro es un investigador del Proyecto.
+            </summary>
+            <param name="investigador"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.esBecarioDelProyecto(Becario)">
+            <summary>
+            Determina si un Becario pasado por parámetro es un beacrio del Proyecto.
+            </summary>
+            <param name="becario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.darDeBaja(System.DateTime)">
+            <summary>
+            Da de Baja el Proyecto.
+            </summary>
+            <param name="dateTime"></param>
+        </member>
+        <member name="M:Proyecto.finalizar(System.DateTime)">
+            <summary>
+            Finaliza el Proyecto.
+            </summary>
+            <param name="fechaFinalizacion"></param>
+        </member>
+        <member name="M:Proyecto.cancelar(System.DateTime)">
+            <summary>
+            Cancela un Proyecto.
+            </summary>
+            <param name="fechaCancelacion"></param>
+        </member>
+        <member name="M:Proyecto.esIncubado">
+            <summary>
+            Determina si un Proyecto es Incubado o no.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.esUTN">
+            <summary>
+            Determina si el Proyecto esta Categorizado como UTN.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.esConIncentivo">
+            <summary>
+            Determina si el Proyecto está Categorizado en Conicet.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.totalDeProyectosActivos">
+            <summary>
+            Retorna el total de Proyectos Activos en el Sistema.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.mostrarNombreAreaDeInvestigación">
+            <summary>
+            Retorna el nombre del Área de Investigación en la que esta investigando el Proyecto.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.esIntegranteDelProyecto(System.Int32)">
+            <summary>
+            Determina si una Persona es Integrante de este Proyecto.
+            Recibe el ID del Integrante como parámetro.
+            </summary>
+            <param name="idIntegrante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.numeroDeIntegrantes">
+            <summary>
+            Devuelve el número de integrantes del Proyecto.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.getCategorizacionConIncentivo">
+            <summary>
+            Obtiene la Categorización "Con Incentivo" del Proyecto
+            </summary>
+            <returns>Devuelve un Objeto ProyectoCategorizado correspondiente a la Categorización "Con Incentivo"</returns>
+        </member>
+        <member name="M:Proyecto.getCategorizacionUTN">
+            <summary>
+            Obtiene la Categorización UNT del Proyecto
+            </summary>
+            <returns>Devuelve un Objeto ProyectoCategorizado correspondiente a la Categorización "Con Incentivo"</returns>
+        </member>
+        <member name="M:Proyecto.eliminarCategoríaUTN">
+            <summary>
+            Elimina la Categoría UTN del Proyecto
+            </summary>
+        </member>
+        <member name="M:Proyecto.eliminarCategoríaConIncentivo">
+            <summary>
+            Elimina la Categoría Con Incentivo del Proyecto
+            </summary>
+        </member>
+        <member name="T:MarcadorJSON">
+            <summary>
+            Representa un marcador de congreso
+            </summary>
+        </member>
+        <member name="M:MarcadorJSON.insertarMarcadorCongreso(MarcadorJSON)">
+            <summary>
+            Crea un nuevo conreso.
+            </summary>
+            <param name="congreso"></param>
+        </member>
+        <member name="M:MarcadorJSON.modificarMarcadorCongreso(MarcadorJSON)">
+            <summary>
+            Edita un congreso existente.
+            </summary>
+            <param name="congreso"></param>
+        </member>
+        <member name="M:MarcadorJSON.eliminarrMarcadorCongreso(System.Int32)">
+            <summary>
+            Elimina un congreso existente a partir de us ID.
+            </summary>
+            <param name="idCongreso"></param>
+        </member>
+        <member name="M:MarcadorJSON.listarCongresosDelAño">
+            <summary>
+            Obtiene los congresos del corriente año.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MarcadorJSON.totalDeCongresosDelAño">
+            <summary>
+            Obtiene el total de congresos del año. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RecursoEnProyecto">
+            <summary>
+            Representa la instancia de un recurso en un proyecto.
+            </summary>
+        </member>
+        <member name="T:TipoProducto">
+            <summary>
+            Determina el tipo de Producto
+            Tipos:
+            #Congreso
+            #Patente
+            #Paper
+            #Producto de Hardware/Software
+            #Publicación en Revista
+            #Publicación Libro/Capítulo
+            #Transferencia/// 
+            </summary>
+        </member>
+        <member name="T:Viatico">
+            <summary>
+            Representa un gasto de una persona en concepto de Viáticos
+            </summary>
+        </member>
+        <member name="T:Gasto">
+            <summary>
+            Gasto que realizan los Investigadores durante sus viajes o en compra de insumos
+            para el proyecto.
+            </summary>
+        </member>
+        <member name="M:Viatico.obtenerEstadoActual">
+            <summary>
+            obtiene el estado actual de un Viático
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TipoCategoriaInvestigador">
+            <summary>
+            Representa un Tipo de Categoría en la que puede categorizar un Investigador.
+            Categorias:
+            # UTN
+            # Conicet
+            </summary>
+        </member>
+        <member name="M:TipoCategoriaInvestigador.esConicet">
+            <summary>
+            Determina si es Conicet
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TipoCategoriaInvestigador.esUTN">
+            <summary>
+            Determina si es UTN
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TipoCategoriaInvestigador.estaEnUso(System.Int32)">
+            <summary>
+            Método para determinar si el Tipo de Categoría está siendo usado.
+            Para no eliminar los que están en uso.
+            </summary>
+            <param name="idTipoCategoriaInvestigador"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DeBaja">
+            <summary>
+            Representa el estado de los recursos que ya no son utilizados por la secretaría.
+            </summary>
+        </member>
+        <member name="T:IEstadoRecurso">
+            <summary>
+            Interfaz para representar el comportamiento de los estados de los recursos de la secretaría. 
+            </summary>
+        </member>
+        <member name="M:DeBaja.estaDadoDeBaja">
+            <summary>
+            
+            </summary>
+            <returns>Devuelve true en caso de que esté dado de baja</returns>
+        </member>
+        <member name="T:Producto">
+            <summary>
+            Representa productos de los proyectos 
+            </summary>
+        </member>
+        <member name="M:Producto.guardar(Producto,System.Int32)">
+            <summary>
+            Guarda un nuevo producto en un proyecto
+            </summary>
+            <param name="producto"></param>
+            <param name="idProyecto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Producto.get(System.Int32)">
+            <summary>
+            Obtiene un proyecto a partir de un id
+            </summary>
+            <param name="idProducto"></param>
+            <returns>Producto</returns>
+        </member>
+        <member name="M:Producto.modificarProducto(Producto)">
+            <summary>
+            Edita un producto
+            </summary>
+            <param name="producto"></param>
+        </member>
+        <member name="M:Producto.eliminarProducto(System.Int32)">
+            <summary>
+            Elimina un producto
+            </summary>
+            <param name="idProducto"></param>
+        </member>
+        <member name="T:InvestigadorJSON">
+            <summary>
+            Permite convertir los datos de los investigadores en una timeline
+            </summary>
+        </member>
+        <member name="M:InvestigadorJSON.noticias(System.Int32,System.String)">
+            <summary>
+            Arma el time line
+            </summary>
+            <param name="idInvestigador">Investigador que desea timeline</param>
+            <param name="path"> Dirección para guardar el JSON</param>
+        </member>
+        <member name="M:InvestigadorJSON.serializar(System.Collections.Generic.List{InvestigadorJSON},Persona,System.String)">
+            <summary>
+            Convierte los datos en JSON
+            </summary>
+            <param name="olista"></param>
+            <param name="investigador"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:InvestigadorJSON.guardarArchivo(System.String,System.String,System.String)">
+            <summary>
+            Guarda el archivo en el directorio especificado
+            </summary>
+            <param name="json"></param>
+            <param name="intro"></param>
+            <param name="path"></param>
+        </member>
+        <member name="T:Pronostico">
+            <summary>
+            Clase pronóstico, esta en cargada de obtener predicciones sobre los valores referenciados. 
+            </summary>
+        </member>
+        <member name="M:Pronostico.#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.String},System.Double,System.Double)">
+            <summary>
+            Constructor de la clase de Pronóstico
+            </summary>
+            <param name="cantidades"> Valores pasados que se utilizaran para construir los valores futuros</param>
+            <param name="referencias">Valores para armar la tabla de salida, por ejemplo los años o periodos a los que pertencen las cantidades</param>
+            <param name="alfa">constante de suavización, entre 0 y 1</param>
+            <param name="beta">constate de suavización para el estimado de la tendencia </param>
+        </member>
+        <member name="M:Pronostico.pronosticame">
+            <summary>
+            Realiza el pronóstico para los datos brindados
+            </summary>
+            <returns>Devuelva una tabla con los cálculos</returns>
+        </member>
+        <member name="M:Pronostico.pronosticoProyectos">
+            <summary>
+            Obtiene los datos para el pronositco de proyectos para el proximo año 
+            (cantidades y referencias)
+            </summary>
+            <returns> devuelve el pronostico con datos de cantidades y referencias cargados.</returns>
+        </member>
+        <member name="M:Pronostico.pronosticoProyectosPorArea(System.Int32)">
+            <summary>
+             Obtiene los datos para el pronositco de proyectos para el proximo año por área especificada
+            </summary>
+            <param name="area">Código del área a pronosticar</param>
+            <returns></returns>
+        </member>
+        <member name="T:Header">
+            <summary>
+            Representa el encabezado de un PDF
+            </summary>
+        </member>
+        <member name="M:Header.OnEndPage(iTextSharp.text.pdf.PdfWriter,iTextSharp.text.Document)">
+            <summary>
+            Crea el encabezado de un documento. 
+            </summary>
+            <param name="writer"></param>
+            <param name="document"></param>
+        </member>
+        <member name="T:Tablero">
+            <summary>
+            Representa una Pizarra virtual donde se publican notas para un Proyecto
+            </summary>
+        </member>
+        <member name="T:Recurso">
+            <summary>
+            Representa un recurso de tipo inventariable que comparten los proyectos de la secretaría. 
+            </summary>
+        </member>
+        <member name="M:Recurso.agregarElementoAlHistorial(Proyecto,System.DateTime)">
+            <summary>
+            Actualiza el historial de recurso en caso de pasar a ser utilziado por un proyecto. 
+            </summary>
+            <param name="proyecto"></param>
+            <param name="fechaDesde"></param>
+        </member>
+        <member name="M:Recurso.agregarRecurso(Recurso)">
+            <summary>
+            Agrega un recurso nuevo a la secretaría.
+            </summary>
+            <param name="recurso"></param>
+        </member>
+        <member name="M:Recurso.modificarRecurso(Recurso)">
+            <summary>
+            Actualiza los datos de un recurso. 
+            </summary>
+            <param name="recurso"></param>
+        </member>
+        <member name="M:Recurso.miProyectoActual">
+            <summary>
+            
+            </summary>
+            <returns>Proyecto en el cual se encuentra el recurso. </returns>
+        </member>
+        <member name="T:Persona">
+            <summary>
+            Clase Abstracta para representar una Persona dentro del Sistema
+            </summary>
+        </member>
+        <member name="M:Persona.Equals(Persona)">
+            <summary>
+            Compara el objeto Persona con otro pasado por parámetro para determinar su igualdad.
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Persona.datosParaDll">
+            <summary>
+            Método abstracto para mostrar los datos básicos de una persona.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Persona.checkMailExistente(System.String,System.Int32)">
+            <summary>
+            Comprueba que no exista el mail registrado anteriormente
+            </summary>
+            <param name="mail"></param>
+            <param name="idPersona"></param>
+            <returns>Devuelve true si el mail no existe. </returns>
+        </member>
+        <member name="M:DAOPronostico.armarPronostico(Pronostico)">
+            <summary>
+            Método que completa los periodos con cantidad 0.
+            </summary>
+            <param name="pronostico">pronostico con datos de base de datos</param>
+            <returns>Devuelve nulo si la información es insuficiente, y el pronostico completado con los años faltantes en caso de que lo sea</returns>
+        </member>
+        <member name="T:Mensaje">
+            <summary>
+            Representa mensajes dejados por los usuarios que se reflejan en el tablero de un perfil de proyecto
+            </summary>
+        </member>
+        <member name="M:Mensaje.get(System.Int32)">
+            <summary>
+            Obtiene un mensaje a partir de si ID
+            </summary>
+            <param name="idMensaje"></param>
+            <returns>Mensaje correspondiente</returns>
+        </member>
+        <member name="M:Mensaje.eliminarMensaje(System.String,System.Int32)">
+            <summary>
+            Elimina un mensaje a partir de su descripción y tablero al cual pertenece
+            </summary>
+            <param name="descripcion"></param>
+            <param name="idTablero"></param>
+        </member>
+        <member name="M:Mensaje.listarMensajesPorProyecto(System.Int32)">
+            <summary>
+            Obtiene todos los mensajes de un proyectp
+            </summary>
+            <param name="idProyecto"></param>
+            <returns>Una lista de mensajes correspondientes al proyecto pasado por párametro</returns>
+        </member>
+        <member name="M:Mensaje.insertarMensaje(Mensaje)">
+            <summary>
+            Inserta un nuevo mensaje a un proyecto
+            </summary>
+            <param name="mensaje"></param>
+        </member>
+        <member name="M:Mensaje.expirarMensajes(System.Int32)">
+            <summary>
+            Expira los mensajes de un tablero
+            </summary>
+            <param name="idTablero"></param>
+        </member>
+        <member name="T:EstadoViatico">
+            <summary>
+            Representa los distintos estados por los que puede transitar un Viático.
+            # Elevado
+            # Pagado
+            # Sin Elevar
+            </summary>
+        </member>
+        <member name="T:noticiaJSON">
+            <summary>
+            Representa noticias para mostrar en el perfil de un proyecto.
+            </summary>
+        </member>
+        <member name="M:noticiaJSON.noticias(System.Int32,System.String)">
+            <summary>
+            Obtiene noticias para un proyecto
+            </summary>
+            <param name="idProyecto"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:noticiaJSON.serializar(System.Collections.Generic.List{noticiaJSON},Proyecto,System.String)">
+            <summary>
+             Convierte los datos en JSON
+            </summary>
+            <param name="olista"></param>
+            <param name="proyecto"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:noticiaJSON.guardarArchivo(System.String,System.String,System.String)">
+            <summary>
+            Guarda los datos en el directorio especificado
+            </summary>
+            <param name="json"></param>
+            <param name="intro"></param>
+            <param name="path"></param>
+        </member>
+        <member name="T:PublicoJSON">
+            <summary>
+            Esta clase es utilizada para serialziar los JSON para armar las timelines públicas.
+            </summary>
+        </member>
+        <member name="M:PublicoJSON.noticias(System.String)">
+            <summary>
+            Este método permite listar todas los elementos de las timelines publicas
+            </summary>
+            <param name="path">dirección absoluta del servidor web</param>
+        </member>
+        <member name="M:PublicoJSON.serializar(System.Collections.Generic.List{PublicoJSON},System.String,System.String)">
+            <summary>
+            Método que crea e JSON correspondiente a cada elemento de la timeline pública
+            </summary>
+            <param name="olista">lista de objetos a serializar</param>
+            <param name="path">dirección absoluta del servidor web a guardar</param>
+            <param name="nombreArchivo">nombre del archivo </param>
+        </member>
+        <member name="M:PublicoJSON.guardarArchivo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Crea el archivo .jSOn que despues permitirá cargar la timeline
+            </summary>
+            <param name="json">objeto serializado</param>
+            <param name="intro">Cabecera de la timeline</param>
+            <param name="path">dirección absoluta del servidor web</param>
+            <param name="nombreArchivo">nombre del archivo </param>
+        </member>
+        <member name="T:EnReserva">
+            <summary>
+            Representa el estado de los recursos que se encuentran reservados por un proyecto.
+            </summary>
+        </member>
+        <member name="M:EnReserva.estaReservado">
+            <summary>
+            
+            </summary>
+            <returns>Devuelve true en caso de estar reservado</returns>
+        </member>
+        <member name="M:EnReserva.asignarRecurso(RecursoEnProyecto,System.DateTime)">
+            <summary>
+            Permite asignar un recurso a proyecto que lo tiene reservado.
+            </summary>
+            <param name="recursoEnProyecto"></param>
+            <param name="fechaDesde"></param>
+        </member>
+        <member name="T:Ocupado">
+            <summary>
+            Representa el estado de los recursos que están siendo utilziados por un proyecto. 
+            </summary>
+        </member>
+        <member name="M:Ocupado.estaOcuado">
+            <summary>
+            
+            </summary>
+            <returns>Devuelve true en caso de estar ocupado</returns>
+        </member>
+        <member name="M:Ocupado.liberarRecurso(RecursoEnProyecto,System.DateTime)">
+            <summary>
+            Permite liberar el recurso que estaba siendo utilziado por un proyecto. 
+            </summary>
+            <param name="recursoEnProyecto"></param>
+            <param name="fechaHastaReal"></param>
+        </member>
+        <member name="M:Ocupado.pedirRecurso(Recurso,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Permite reservar un recurso que está siendo utilziado para cuando se desocupe
+            </summary>
+            <param name="recurso"></param>
+            <param name="fechaDesde"></param>
+            <param name="diasEstimadosDeUSo"></param>
+            <param name="idProyecto"></param>
+        </member>
+        <member name="M:Ocupado.tengoDemora(RecursoEnProyecto)">
+            <summary>
+            Permite decidir si un recurso ocupado sigue en fecha de prestamo o ya debería ser devuelto
+            </summary>
+            <param name="recursoEnProyecto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Insumo">
+            <summary>
+            Representa un tipo de gasto, el cual implica elementos comprados por el proyecto para uso propio.
+            </summary>
+        </member>
+        <member name="M:Insumo.#ctor(System.Double,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="monto">Valor del insumo</param>
+            <param name="descripcion"></param>
+            <param name="fecha">Fecha de compra</param>
+        </member>
+        <member name="M:Conexion.getInstance">
+            <summary>
+            Singleton de Base de Datos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Conexion.conexionBD">
+            <summary>
+            Para establcer la Conexion Con la Base de Datos
+             
+            </summary>    
+        </member>
+        <member name="T:HistorialDeRecurso">
+            <summary>
+            Muestra el historial de los recursos por los diferentes proyectos. 
+            </summary>
+        </member>
+        <member name="T:HistorialCategoria">
+            <summary>
+            Representa una Categoría por la que pasó un Investigador en un Período de Tiempo dado.
+            </summary>
+        </member>
+        <member name="M:HistorialCategoria.fechaContenidaDentroDeUnaCategorizacion(System.DateTime)">
+            <summary>
+            Determina si la fecha pasada por parámetro está incluida dentro de este Historial de Categorización.
+            </summary>
+            <param name="fechaCategorizacion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Presupuesto">
+            <summary>
+            Representa el monto monetario que tiene disponible un proyecto
+            </summary>
+        </member>
+        <member name="M:Presupuesto.#ctor(System.Double,System.DateTime,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="monto"></param>
+            <param name="fechaVencimiento"></param>
+            <param name="fechaAsignacion"></param>
+        </member>
+        <member name="M:Presupuesto.calcularMontoActual">
+            <summary>
+            Calcula el monto que tiene disponible para gastar un proyecto, en base de lo que ya haya gastado
+            </summary>
+            <returns>Monto disponible</returns>
+        </member>
+        <member name="M:Presupuesto.insertarPresupuesto(System.Int32)">
+            <summary>
+            Agrega un presupuesto
+            </summary>
+            <param name="idProyecto"></param>
+        </member>
+        <member name="M:Presupuesto.get(System.Int32)">
+            <summary>
+            Obtiene un presupuesto a partir de un id
+            </summary>
+            <param name="idPresupuesto"></param>
+            <returns>Presupuesto</returns>
+        </member>
+        <member name="T:TipoBecario">
+            <summary>
+            Determina el Tipo de Becario.
+            Tipos:
+            #Rectorado
+            #BINID
+            #SAE
+            #Otros
+            </summary>
+        </member>
+        <member name="T:Investigador">
+            <summary>
+            Representa un Investigador registrado en la Secretaría de Investigación.
+            </summary>
+        </member>
+        <member name="M:Investigador.#ctor">
+            <summary>
+            Constructuor por Defecto de la Clase Investigador
+            </summary>
+        </member>
+        <member name="M:Investigador.getInvestigador(System.Int32)">
+            <summary>
+            Retorna un objeto Investigador según el ID del mismo.
+            </summary>
+            <param name="idInvestigador">ID del Investigador</param>
+            <returns>Objeto Investigador</returns>
+        </member>
+        <member name="M:Investigador.guardar(Investigador,System.Collections.Generic.List{Proyecto},System.Collections.Generic.List{Proyecto})">
+            <summary>
+            Guardar un nuevo Investigador con sus proyectos asociados.
+            </summary>
+            <param name="investigador"></param>
+            <param name="proyectosCodirector"></param>
+            <param name="proyectoInvestigador"></param>
+        </member>
+        <member name="M:Investigador.puedoSerDirector">
+            <summary>
+            Retorna True si el Investigador cumple los requisitos de Categoría para ser un Director.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.puedoSerAsesorCientífico">
+            <summary>
+            Retorna True si el Investigador cumple los requisitos de Categoría para ser un Asesor Científico.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.necesitoAsesorCientificoParaSerDirector">
+            <summary>
+            Retorna True si el Investigador necesita de un Asesor Científico para ser Director.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.puedoSerCoDirector">
+            <summary>
+            Retorna True si el Investigador cumple los requisitos de Categoría para ser Co-Director.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.datosParaDll">
+            <summary>
+            Método Heredado de la clase Persona.
+            Devuelve un String con: Nombre, Apellido, Legajo y Categorias.
+            Usado para mostrar datos en los DropDownList de la Interfaz.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.insertar">
+            <summary>
+            Inserta el objeto Investigador en la Base de Datos.
+            </summary>
+        </member>
+        <member name="M:Investigador.modificar">
+            <summary>
+            Modifica el objeto en la Base de Datos
+            </summary>
+        </member>
+        <member name="M:Investigador.tieneUsuarioCreado">
+            <summary>
+            Retorna True si el Investigador tiene un Usuario Creado.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.asignarUsuario">
+            <summary>
+            Asigna un usuario al objeto Investigador.
+            </summary>
+        </member>
+        <member name="M:Investigador.reCategorizar(CategoriaInvestigador,System.DateTime)">
+            <summary>
+            Método para Re Categorizar un nuevo Investigador
+            </summary>
+            <param name="nuevaCategoria"> Categoría del Investigador</param>
+            <param name="fechaCategorizacion">Fecha en la que categorizó</param>
+        </member>
+        <member name="M:Investigador.agregarCategoriaAlHistorialDeCategorizacion(HistorialCategoria)">
+            <summary>
+            Agrega un nuevo Historial de Categoría al historial del Investigador
+            </summary>
+            <param name="viejaCategoria"></param>
+        </member>
+        <member name="M:Investigador.asignarProducto(System.Int32)">
+            <summary>
+            Asigna un Producto registrado al objeto Investigador.
+            </summary>
+            <param name="idProducto"></param>
+        </member>
+        <member name="M:Investigador.totalDeInvestigadoresActivos">
+            <summary>
+            Método estático que devuelve el total de Investigadores Activos en el Sistema.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Investigador.darDeBaja(System.DateTime)">
+            <summary>
+            Da de baja un Investigador en el sistema
+            </summary>
+            <param name="fechaBaja"></param>
+        </member>
+        <member name="M:Investigador.fechaContenidaDentroDeUnaCategorizacion(System.DateTime,TipoCategoriaInvestigador)">
+            <summary>
+            Valida si la fecha pasada por parámetro se encuentra incluida dentro de algun
+            historial de categorización del Investigador.
+            </summary>
+            <param name="fechaCategorizacion"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Investigador.proyectosEnLosQueParticipoActualmente">
+            <summary>
+            Método que devuelve los Proyectos En Desarrollo en los cuales participa el Investigador
+            </summary>
+            <returns>Lista de Proyectos en los que Participa</returns>
+        </member>
+        <member name="M:Investigador.cantidadDeProyectosEnLosQueParticipoActualmente">
+            <summary>
+            Método que devuelve el número de Proyectos en los que Participa el Investigador
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EstadoProyecto">
+            <summary>
+            Representa los Distintos Estados por los que puede transitar un Proyecto.
+            Estados: 
+            # En Desarrollo
+            # Finalizado
+            # Cancelado.
+            </summary>
+        </member>
+        <member name="M:EstadoProyecto.getEstado(System.Int32)">
+            <summary>
+            Retorna el Objeto Estado según el ID que se le pase por Parámetro.
+            </summary>
+            <param name="idEstadoProyecto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Becario">
+            <summary>
+            Representa un Becario registrado en el Sistema.
+            </summary>
+        </member>
+        <member name="M:Becario.guardar(Becario)">
+            <summary>
+            Guarda un nuevo Becario en la Base de Datos
+            </summary>
+            <param name="becario"></param>
+        </member>
+        <member name="M:Becario.getBecario(System.Int32)">
+            <summary>
+            Retorna un Becario de la Base de Datos según el ID del Mismo.
+            </summary>
+            <param name="idBecario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.modificar(Becario)">
+            <summary>
+            Modifica el Becario en la Base de Datos.
+            </summary>
+            <param name="becario"></param>
+        </member>
+        <member name="M:Becario.datosParaDll">
+            <summary>
+            Heredado de la clase Persona.
+            Devuelve un String con: Nombre, Apellido, Legajo y Categorias.
+            Usado para mostrar datos en los DropDownList de la Interfaz.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.tieneUsuarioCreado">
+            <summary>
+            Determina si el Becario tiene un Usuario creado o no.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.asignarUsuario">
+            <summary>
+            Asigna un Usuario al Becario.
+            </summary>
+        </member>
+        <member name="M:Becario.guardar">
+            <summary>
+            Guarda el Becario en la Base de Datos
+            </summary>
+        </member>
+        <member name="M:Becario.exportarPDFActividades(System.String)">
+            <summary>
+            Exporta las actividades del Becario a un archivo PDF.
+            Retorna True si se pudo exportar con éxito.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.exportarPDFActividadesPorProyecto(System.Int32,System.String)">
+            <summary>
+            Exporta las Actividades del Becario dependiendo del ID del Proyecto que se le pase por parámetro.
+            </summary>
+            <param name="idProyecto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.armarHtmlActividadesPorProyectoPorHito(System.Int32,System.Int32)">
+            <summary>
+            Método para armar el código HTML necesario para listar las actividades
+            por proyecto por hito de cada Becario.
+            </summary>
+            <param name="idHito"></param>
+            <param name="idBecario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.armarHtmlActividadesPorProyecto(System.Int32,System.Int32)">
+            <summary>
+            Método para armar el código HTML necesario para listar las actividades
+            por proyecto de cada Becario.
+            </summary>
+            <param name="idProyecto"></param>
+            <param name="idBecario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Becario.asignarProducto(System.Int32)">
+            <summary>
+            Le asigna un Producto generado al Becario.
+            </summary>
+            <param name="idProducto"></param>
+        </member>
+        <member name="M:Becario.totalDeBecariosActivos">
+            <summary>
+            Retorna la cantidad de Becarios Activos en el Sistema.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ExportarPDF">
+            <summary>
+            Clase utilziada para realizar los informes, utliza iTextSharp, libreria que logra exportar contenido html a formato pdf. 
+            </summary>
+        </member>
+        <member name="M:ExportarPDF.generarDocumentoDesdeHTML(System.String)">
+            <summary>
+            genera un inofrme en pdf a partir de contenido html
+            </summary>
+            <param name="infoEnHtml">Estructura HTML que se va a parsear </param>
+        </member>
+        <member name="T:Tendencia">
+            <summary>
+            Representa una palabra que es tendencia en los Proyectos
+            </summary>
+        </member>
+        <member name="M:Tendencia.crearTendencia(System.Int32)">
+            <summary>
+            Crea lista de tags para los proyectos de un determinado año
+            </summary>
+            <param name="año">Año para el cual se crea la lista</param>
+            <returns>Lista de Tags que son tendencia en el año pasado por parámetro</returns>
+        </member>
+        <member name="T:Disponible">
+            <summary>
+            Representa el estado de los recursos cuando no están siendo utlizados
+            </summary>
+        </member>
+        <member name="M:Disponible.estaDisponible">
+            <summary>
+            
+            </summary>
+            <returns>Devuelve true en caso de que estñe disponible </returns>
+        </member>
+        <member name="M:Disponible.pedirRecurso(Recurso,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Permite reservar un recurso disponible
+            </summary>
+            <param name="recurso"></param>
+            <param name="fechaDesde"></param>
+            <param name="diasEstimadosDeUSo"></param>
+            <param name="idProyecto"></param>
+        </member>
+        <member name="T:OcupadoConReserva">
+            <summary>
+            Representa el estado de los recursos que están siendo utilizados por un proyecto pero a su vez están reservados por otro. 
+            </summary>
+        </member>
+        <member name="M:OcupadoConReserva.estaOcupadoConReserva">
+            <summary>
+            
+            </summary>
+            <returns>Devuelve true en caso de si está ocupdo y además tiene reserva. </returns>
+        </member>
+        <member name="M:OcupadoConReserva.liberarRecurso(RecursoEnProyecto,System.DateTime)">
+            <summary>
+            Permite liberar el recurso del proyecto actual usandolo, y pasarlo al proyecto que lo tiene reserbvado
+            </summary>
+            <param name="recursoEnProyecto"></param>
+            <param name="fechaHastaReal"></param>
+        </member>
+        <member name="T:AreaDeInvestigacion">
+            <summary>
+            Representa un Área de Investigación en la cual esta Investigando un Proyecto.
+            </summary>
+        </member>
+        <member name="T:Footer">
+            <summary>
+            Pie de página de los archivos PDF
+            </summary>
+        </member>
+        <member name="M:Footer.OnEndPage(iTextSharp.text.pdf.PdfWriter,iTextSharp.text.Document)">
+            <summary>
+            Crea el pie de página para un documento a imprimir
+            </summary>
+            <param name="writer"></param>
+            <param name="doc"></param>
+        </member>
+        <member name="T:ConDemora">
+            <summary>
+            Clase que representa el estado de los recursos que se encuentran en fecha de devolución, pero todavía no han sido devueltos. 
+            </summary>
+        </member>
+        <member name="M:ConDemora.estaDemorado">
+            <summary>
+            
+            </summary>
+            <returns>Verdadero si está demorado</returns>
+        </member>
+        <member name="M:ConDemora.liberarRecurso(RecursoEnProyecto,System.DateTime)">
+            <summary>
+            Libera el recurso demorado
+            </summary>
+            <param name="recursoEnProyecto"></param>
+            <param name="fechaHastaReal"></param>
+        </member>
+        <member name="M:ConDemora.pedirRecurso(Recurso,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Método que pide permite reservar recursos demorados
+            </summary>
+            <param name="recurso"></param>
+            <param name="fechaDesde"></param>
+            <param name="diasEstimadosDeUSo"></param>
+            <param name="idProyecto"></param>
+        </member>
+        <member name="T:Hito">
+            <summary>
+            Representa Hitos Importantes en cada Proecto de Investigación.
+            Permite hacer estimaciones de Tareas y controlar el avance del Proyecto.
+            </summary>
+        </member>
+        <member name="M:Hito.guardarHito(Hito,System.Int32)">
+            <summary>
+            Guarda un hito en la Base de Datos
+            </summary>
+            <param name="hito"></param>
+            <param name="idProyecto"></param>
+        </member>
+        <member name="M:Hito.eliminarHito(System.Int32)">
+            <summary>
+            Elimina un Hito de la Base de Datos
+            </summary>
+            <param name="idHito"></param>
+        </member>
+        <member name="M:Hito.modificarHito(Hito)">
+            <summary>
+            Modifica un Hito de la Base de Datos
+            </summary>
+            <param name="hito"></param>
+        </member>
+        <member name="M:Hito.get(System.Int32)">
+            <summary>
+            Método para obtener un Hito de la Base de Datos
+            </summary>
+            <param name="idHito"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hito.finalizarHitoProyecto(Hito)">
+            <summary>
+            Método para finalizar un Hito para un Proyecto Dado.
+            </summary>
+            <param name="hito"></param>
+        </member>
+        <member name="M:Hito.getActividadBecario(System.Int32)">
+            <summary>
+            Método utilizado para obtener un Hito a ser cargado en las Actividades de Becario.
+            </summary>
+            <param name="idHito"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hito.insertarActividadBecario(Hito)">
+            <summary>
+            Método para insertar actividades de un Becario que luego serán recuperadas
+            a la hora de hacer los informes de seguimiento.
+            </summary>
+            <param name="hito"></param>
+        </member>
+        <member name="M:Hito.actualizarActividadBecario(Hito)">
+            <summary>
+            Actualiza una determinada actividad del becario pasada por parámetro.
+            </summary>
+            <param name="hito"></param>
+        </member>
+        <member name="M:Hito.finalizarActividadBecario(Hito)">
+            <summary>
+            Finaliza una actividad de un Becario con la Fecha Actual
+            </summary>
+            <param name="hito"></param>
+        </member>
+        <member name="M:Hito.borrarActividadBecario(System.Int32)">
+            <summary>
+            Borra una actividad específica de la Base de Datos
+            </summary>
+            <param name="idHito"></param>
+        </member>
+        <member name="M:Hito.validarRangoDeFecha(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Método que valida que la fecha de la actividad se encuentre entre el rango
+            de duración del proyecto en el cual se desarrolló.
+            </summary>
+            <param name="fechaActvidad"></param>
+            <param name="idProyecto"></param>
+            <param name="idBecario"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Usuario">
+            <summary>
+            Representa un Usuario registrado en el sistema
+            </summary>
+        </member>
+        <member name="M:Usuario.obtenerRutaImagen">
+            <summary>
+            Devuelve la ubicacion de la imagen de perfil
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Usuario.getPersona">
+            <summary>
+            Devuelve el objeto de la clase Persona asociado al usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Usuario.esInvestigador">
+            <summary>
+            Determina si es Investigador
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Usuario.actualizarCV(System.String)">
+            <summary>
+            Actualiza el archivo Curriculum Vitae del usuario
+            </summary>
+            <param name="curriculum">Ubicación del archivo</param>
+        </member>
+        <member name="M:Usuario.CrearContrasena(System.Int32)">
+            <summary>
+            Genera una contraseña a partir de una serie de caracteres permitidos
+            </summary>
+            <param name="longitudContrasena">Longitud de la contraseña a generar</param>
+            <returns>Contraseña generada</returns>
+        </member>
+        <member name="M:Usuario.enviarMail(System.String,System.String,System.String)">
+            <summary>
+            Envia el mail de creación de usuario
+            </summary>
+            <param name="direccionMail">Direccion de Correo del Destinatario</param>
+            <param name="nombre">Nombre de la persona asociada al usuario</param>
+            <param name="contrasena">Contraseña generada</param>
+            <returns>True si se envió correctamente</returns>
+        </member>
+        <member name="M:Usuario.enviarMensajePorMail(System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para enviar un mail con un Mensaje pasado por parámetro.
+            </summary>
+            <param name="direccionMail">Dirección de Correo del Destinatario</param>
+            <param name="nombre">Nombre del Destinatario</param>
+            <param name="subject">Subject del Mail</param>
+            <param name="mensaje">Mensaje a ser enviado</param>
+        </member>
+        <member name="M:Usuario.reestablecerContrasena(System.String)">
+            <summary>
+            Genera una contraseña nueva para un usuario y envía un mail con la misma
+            </summary>
+            <param name="nombreUsuario">Usuario al que se le reestablecerá la contraseña</param>
+            <returns></returns>
+        </member>
+        <member name="M:Usuario.armarHtmlActividadUsuarios(System.Data.DataTable)">
+            <summary>
+            Devuelve una cadena con formato HTML que permite su exportación a PDF
+            </summary>
+            <param name="tablaActividadUsuarios">Tabla con datos de los usuarios registrados en el sistema</param>
+            <returns></returns>
+        </member>
+        <member name="T:HistorialEstadoViatico">
+            <summary>
+            Representa los distinos estados por los que pasó un viático.
+            Permite a un Investigador hacer un seguimiento del estado de los mismos.
+            </summary>
+        </member>
+    </members>
+</doc>

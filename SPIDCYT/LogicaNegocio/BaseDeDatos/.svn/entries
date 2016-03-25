@@ -1,0 +1,115 @@
+10
+
+dir
+908
+http://spidcyt.googlecode.com/svn/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos
+http://spidcyt.googlecode.com/svn
+
+
+
+2013-08-28T01:20:13.891118Z
+899
+belen89
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4cd84798-db9f-9304-2b0f-279d660e17be
+
+Mensaje
+dir
+
+Recurso
+dir
+
+MarcadorJSON
+dir
+
+EstadoRecurso
+dir
+
+Conexion
+dir
+
+Usuario
+dir
+
+RecursoEnProyecto
+dir
+
+TipoProducto
+dir
+
+Presupuesto
+dir
+
+Investigador
+dir
+
+Producto
+dir
+
+TipoProyecto
+dir
+
+ProyectoCategorizado
+dir
+
+RequerimientosBecario
+dir
+
+TipoBecario
+dir
+
+Hito
+dir
+
+Proyecto
+dir
+
+AreaDeInvestigacion
+dir
+
+EstadoProyecto
+dir
+
+Becario
+dir
+
+Pronóstico
+dir
+
+TipoCategoriaInvestigador
+dir
+
+HistorialDeRecurso
+dir
+
+Gasto
+dir
+
+TendenciaInvestigacion
+dir
+
+CategoriaInvestigador
+dir
+
+ActividadBecario
+dir
+
+HistorialCategoria
+dir
+
+Estadisticas
+dir
+

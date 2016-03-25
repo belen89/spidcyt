@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Para obtener más información sobre cómo configurar la aplicación de ASP.NET, visite
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <connectionStrings>
+    <add name="ApplicationServices" connectionString="Data Source=localhost;Initial Catalog=SPIDCYT;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <add name="SPIDCYTConnectionString" connectionString="Data Source=localhost;Initial Catalog=SPIDCYT;Integrated Security=True" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+    <authentication mode="Forms">
+      <forms loginUrl="~/Account/Login.aspx" timeout="2880" />
+    </authentication>
+    <membership>
+      <providers>
+        <clear />
+        <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider" connectionStringName="ApplicationServices" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="false" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="/" />
+      </providers>
+    </membership>
+    <profile>
+      <providers>
+        <clear />
+        <add name="AspNetSqlProfileProvider" type="System.Web.Profile.SqlProfileProvider" connectionStringName="ApplicationServices" applicationName="/" />
+      </providers>
+      <properties>
+        <add name="Name" defaultValue="Usr" />
+      </properties>
+    </profile>
+    <roleManager enabled="true">
+      <providers>
+        <clear />
+        <add name="AspNetSqlRoleProvider" type="System.Web.Security.SqlRoleProvider" connectionStringName="ApplicationServices" applicationName="/" />
+        <add name="AspNetWindowsTokenRoleProvider" type="System.Web.Security.WindowsTokenRoleProvider" applicationName="/" />
+      </providers>
+    </roleManager>
+    <pages>
+      <controls>
+        <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" />
+      </controls>
+    </pages>
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+  </system.webServer>
+  <system.net>
+    <mailSettings>
+      <smtp from="spidcyt@gmail.com">
+        <network host="smtp.gmail.com" password="34724482" userName="spidcyt" />
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <location path="Default.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Vistas/MapaPrueba.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADMINISTRADOR, SECRETARIO" />
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <appSettings>
+    <add key="microsoft.visualstudio.teamsystems.aspnetdevserver:/Presentacion" value="60679;True;5564;1;-8588508349841369510" />
+    <add key="microsoft.visualstudio.teamsystems.backupinfo" value="1;web.config.backup" />
+  </appSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+    </assemblyBinding>
+  </runtime>
+</configuration>

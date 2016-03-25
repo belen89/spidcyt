@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/899/trunk/src/SPIDCYT/LogicaNegocio/JSONs
+END
+PublicoJSON.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/899/trunk/src/SPIDCYT/LogicaNegocio/JSONs/PublicoJSON.cs
+END
+InvestigadorJSON.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/899/trunk/src/SPIDCYT/LogicaNegocio/JSONs/InvestigadorJSON.cs
+END
+noticiaJSON.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/899/trunk/src/SPIDCYT/LogicaNegocio/JSONs/noticiaJSON.cs
+END
+MarcadorJSON.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/813/trunk/src/SPIDCYT/LogicaNegocio/JSONs/MarcadorJSON.cs
+END

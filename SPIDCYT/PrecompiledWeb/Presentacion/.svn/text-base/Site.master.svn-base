@@ -1,0 +1,107 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="SiteMaster, App_Web_dh2hp3y5" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/StyleMsg.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 900px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Secretaría de Promoción de Investigaciones en Ciencia y Tecnología
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        <br />
+                        <br />
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Iniciar sesión</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Bienvenido <span class="bold"><a href="~/Vistas/Investigadores/Perfil/Perfil.aspx"
+                            runat="server">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </a></span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión"
+                            LogoutPageUrl="~/" />
+                        ] &nbsp;[ <a href="~/Account/ChangePassword.aspx" runat="server">Cambiar contraseña</a>
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="False"
+                    IncludeStyleBlock="False" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Principal" />
+                        <asp:MenuItem Text="Proyectos" NavigateUrl="~/Vistas/Web/Proyectos.aspx">
+                            <asp:MenuItem NavigateUrl="~/Vistas/Proyectos/Alta.aspx" Text="Alta Proyecto" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Proyectos/ConsultarProyectos.aspx" Text="Administrar Proyectos" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Proyectos/Finalizar.aspx" Text="Finalizar un Proyecto" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Incubados/Alta.aspx" Text="Alta Proyecto Incubado" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Incubados/ConsultarProyectos.aspx" Text="Administrar Proyectos Incubados" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Incubados/Finalizar.aspx" Text="Finalizar un Proyecto Incubado" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Investigadores" NavigateUrl="~/Vistas/Web/Investigadores.aspx">
+                            <asp:MenuItem NavigateUrl="~/Vistas/Investigadores/Alta.aspx" Text="Alta Investigador" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Investigadores/ConsultaInvestigadores.aspx" Text="Administrar Investigadores" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Becarios" NavigateUrl="~/Vistas/Web/Becarios.aspx">
+                            <asp:MenuItem NavigateUrl="~/Vistas/Becarios/Alta.aspx" Text="Alta Becario" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Investigadores/ConsultaInvestigadores.aspx" Text="Administrar Becarios" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Proyectos/Perfil_Proyecto/ConsultarRequerimientosDeBecario.aspx"
+                                Text="Becarios requeridos" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Vistas/BuscadorAcademico.aspx" Text="Buscador Académico" />
+                        <asp:MenuItem Text="Secretaría">
+                            <asp:MenuItem NavigateUrl="~/Vistas/Proyectos/Recursos/AltaRecurso.aspx" Text="Alta Recursos" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Proyectos/Recursos/AsignarRecursos.aspx" Text="Asignar Recursos" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Secretaria/TipoCategoria.aspx" Text="Tipos Categoría Investigador" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Secretaria/CategoriaInvestigador.aspx" Text="Categoría Investigador" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/ConfiguracionCongresos.aspx" Text="Cargar Congresos" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Secretaria/Pronostico.aspx" Text="Pronósticos de la Secretaría" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/TendenciasDeInvestigación.aspx" Text="Tendencias de Investigación" />
+                            <asp:MenuItem NavigateUrl="Vistas/Secretaria/Reportes/Reportes.aspx" Text="Descarga de Reportes" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Investigadores/InvestigadoresPorCategoria.aspx"
+                                Text="Investigadores por Categoria" />
+                                <asp:MenuItem NavigateUrl="~/Vistas/Secretaria/ActividadUsuarios.aspx" Text="Actividad de los Usuarios" />
+                            <asp:MenuItem NavigateUrl="~/Vistas/Secretaria/Correo.aspx" Text="Enviar correo electrónico" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Categorización" NavigateUrl="~/Vistas/Web/ProcesoCategorizacion.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Ayuda" NavigateUrl="~/Help/Manual de Ayuda para el Usuario de SPIDCYT.html"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <foot>
+       <table align="center"> <tr>
+   <td> [SPIDCYT] Universidad Tecnológica Nacional - Facultad Regional Córdoba</td></tr></table>
+</foot>
+    </div>
+    </form>
+</body>
+</html>

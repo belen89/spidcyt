@@ -1,0 +1,34 @@
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.dll
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.pdb
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.dll
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.xtra.dll
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\ResolveAssemblyReference.cache
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.dll
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.pdb
+D:\ProyetoFinal\SPIDCYT2\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.XML
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.dll
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.pdb
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.dll
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.xtra.dll
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.dll
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.pdb
+<<<<<<< .mine
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.dll
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.pdb
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.dll
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.xtra.dll
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.dll
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.pdb
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicaNegocio.csprojResolveAssemblyReference.cache
+D:\Proyecto Final\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.XML
+=======
+D:\ProyetoFinal\SPIDCYT\trunk\src\SPIDCYT\LogicaNegocio\obj\Release\LogicaNegocio.csprojResolveAssemblyReference.cache
+>>>>>>> .r898
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.XML
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.dll
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\bin\Release\LogicNegocio.pdb
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.dll
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\bin\Release\itextsharp.xtra.dll
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\obj\Release\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.dll
+C:\Users\User\Documents\src\SPIDCYT\LogicaNegocio\obj\Release\LogicNegocio.pdb

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogicNegocio</RootNamespace>
+    <AssemblyName>LogicNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\LogicNegocio.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\LogicNegocio.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\itextsharp-all-5.1.3\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\packages\itextsharp-all-5.1.3\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDeDatos\ActividadBecario\DAOActividadBecario.cs" />
+    <Compile Include="BaseDeDatos\ActividadBecario\Editar.cs" />
+    <Compile Include="BaseDeDatos\ActividadBecario\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\ActividadBecario\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\ActividadBecario\Listar.cs" />
+    <Compile Include="BaseDeDatos\AreaDeInvestigacion\DAOAreaDeInvestigacion.cs" />
+    <Compile Include="BaseDeDatos\AreaDeInvestigacion\Listar.cs" />
+    <Compile Include="BaseDeDatos\Becario\DAOBecario.cs" />
+    <Compile Include="BaseDeDatos\Becario\Editar.cs" />
+    <Compile Include="BaseDeDatos\Becario\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Becario\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Becario\Listar.cs" />
+    <Compile Include="BaseDeDatos\CategoriaInvestigador\DAOCategoriaInvestigador.cs" />
+    <Compile Include="BaseDeDatos\CategoriaInvestigador\Editar.cs" />
+    <Compile Include="BaseDeDatos\CategoriaInvestigador\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\CategoriaInvestigador\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\CategoriaInvestigador\Listar.cs" />
+    <Compile Include="BaseDeDatos\Conexion\Conexion.cs" />
+    <Compile Include="BaseDeDatos\Estadisticas\Estadisticas.cs" />
+    <Compile Include="BaseDeDatos\Gasto\DAOGasto.cs" />
+    <Compile Include="BaseDeDatos\Gasto\Editar.cs" />
+    <Compile Include="BaseDeDatos\Gasto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Gasto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Gasto\Listar.cs" />
+    <Compile Include="BaseDeDatos\MarcadorJSON\DAOMarcadorJSON.cs" />
+    <Compile Include="BaseDeDatos\MarcadorJSON\Editar.cs" />
+    <Compile Include="BaseDeDatos\MarcadorJSON\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\MarcadorJSON\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\MarcadorJSON\Listar.cs" />
+    <Compile Include="BaseDeDatos\EstadoProyecto\DAOEstadoProyecto.cs" />
+    <Compile Include="BaseDeDatos\EstadoProyecto\Editar.cs" />
+    <Compile Include="BaseDeDatos\EstadoProyecto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\EstadoProyecto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\EstadoProyecto\Listar.cs" />
+    <Compile Include="BaseDeDatos\EstadoRecurso\DAOEstadoRecurso.cs" />
+    <Compile Include="BaseDeDatos\EstadoRecurso\Editar.cs" />
+    <Compile Include="BaseDeDatos\EstadoRecurso\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\EstadoRecurso\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\EstadoRecurso\Listar.cs" />
+    <Compile Include="BaseDeDatos\HistorialCategoria\DAOHistorialCategoria.cs" />
+    <Compile Include="BaseDeDatos\HistorialCategoria\Editar.cs" />
+    <Compile Include="BaseDeDatos\HistorialCategoria\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\HistorialCategoria\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\HistorialCategoria\Listar.cs" />
+    <Compile Include="BaseDeDatos\HistorialDeRecurso\DAOHistorialDeRecurso.cs" />
+    <Compile Include="BaseDeDatos\HistorialDeRecurso\Editar.cs" />
+    <Compile Include="BaseDeDatos\HistorialDeRecurso\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\HistorialDeRecurso\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\HistorialDeRecurso\Listar.cs" />
+    <Compile Include="BaseDeDatos\Hito\DAOHito.cs" />
+    <Compile Include="BaseDeDatos\Hito\Editar.cs" />
+    <Compile Include="BaseDeDatos\Hito\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Hito\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Hito\Listar.cs" />
+    <Compile Include="BaseDeDatos\Investigador\DAOInvestigador.cs" />
+    <Compile Include="BaseDeDatos\Investigador\Editar.cs" />
+    <Compile Include="BaseDeDatos\Investigador\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Investigador\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Investigador\Listar.cs" />
+    <Compile Include="BaseDeDatos\Mensaje\DAOMensaje.cs" />
+    <Compile Include="BaseDeDatos\Mensaje\Editar.cs" />
+    <Compile Include="BaseDeDatos\Mensaje\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Mensaje\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Mensaje\Listar.cs" />
+    <Compile Include="BaseDeDatos\Presupuesto\DAOPresupuesto.cs" />
+    <Compile Include="BaseDeDatos\Presupuesto\Editar.cs" />
+    <Compile Include="BaseDeDatos\Presupuesto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Presupuesto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Presupuesto\Listar.cs" />
+    <Compile Include="BaseDeDatos\Pronóstico\DAOPronostico.cs" />
+    <Compile Include="BaseDeDatos\Pronóstico\Editar.cs" />
+    <Compile Include="BaseDeDatos\Pronóstico\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Pronóstico\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Pronóstico\Listar.cs" />
+    <Compile Include="BaseDeDatos\RecursoEnProyecto\DAORecursoEnProyecto.cs" />
+    <Compile Include="BaseDeDatos\RecursoEnProyecto\Editar.cs" />
+    <Compile Include="BaseDeDatos\RecursoEnProyecto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\RecursoEnProyecto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\RecursoEnProyecto\Listar.cs" />
+    <Compile Include="BaseDeDatos\TendenciaInvestigacion\DAOTendencia.cs" />
+    <Compile Include="BaseDeDatos\TendenciaInvestigacion\Editar.cs" />
+    <Compile Include="BaseDeDatos\TendenciaInvestigacion\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\TendenciaInvestigacion\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\TendenciaInvestigacion\Listar.cs" />
+    <Compile Include="BaseDeDatos\Usuario\DAOUsuario.cs" />
+    <Compile Include="BaseDeDatos\Usuario\Editar.cs" />
+    <Compile Include="BaseDeDatos\Usuario\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Usuario\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Usuario\Listar.cs" />
+    <Compile Include="Clases\EstadoViatico.cs" />
+    <Compile Include="Clases\Gasto.cs" />
+    <Compile Include="Clases\HistorialEstadoViatico.cs" />
+    <Compile Include="Clases\Insumo.cs" />
+    <Compile Include="Clases\Presupuesto.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\Ocupado.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\OcupadoConReserva.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\ConDemora.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\DeBaja.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\EnReserva.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\Disponible.cs" />
+    <Compile Include="Clases\Recursos\EstadoRecurso\IEstadoRecurso.cs" />
+    <Compile Include="Clases\Recursos\HistorialDeRecurso.cs" />
+    <Compile Include="Clases\Recursos\RecursoEnProyecto.cs" />
+    <Compile Include="Clases\Tendencia.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Clases\Viatico.cs" />
+    <Compile Include="Gestores\Informes PDF\ExportarPDF.cs" />
+    <Compile Include="Gestores\Informes PDF\Footer.cs" />
+    <Compile Include="Gestores\Informes PDF\Header.cs" />
+    <Compile Include="Gestores\Pronostico\Pronostico.cs" />
+    <Compile Include="JSONs\InvestigadorJSON.cs" />
+    <Compile Include="JSONs\MarcadorJSON.cs" />
+    <Compile Include="JSONs\noticiaJSON.cs" />
+    <Compile Include="BaseDeDatos\Producto\DAOProducto.cs" />
+    <Compile Include="BaseDeDatos\Producto\Editar.cs" />
+    <Compile Include="BaseDeDatos\Producto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Producto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Producto\Listar.cs" />
+    <Compile Include="BaseDeDatos\ProyectoCategorizado\DAOProyectoCategorizado.cs" />
+    <Compile Include="BaseDeDatos\ProyectoCategorizado\Editar.cs" />
+    <Compile Include="BaseDeDatos\ProyectoCategorizado\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\ProyectoCategorizado\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\ProyectoCategorizado\Listar.cs" />
+    <Compile Include="BaseDeDatos\Proyecto\DAOProyecto.cs" />
+    <Compile Include="BaseDeDatos\Proyecto\Editar.cs" />
+    <Compile Include="BaseDeDatos\Proyecto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Proyecto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Proyecto\Listar.cs" />
+    <Compile Include="BaseDeDatos\Recurso\DAORecurso.cs" />
+    <Compile Include="BaseDeDatos\Recurso\Editar.cs" />
+    <Compile Include="BaseDeDatos\Recurso\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\Recurso\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\Recurso\Listar.cs" />
+    <Compile Include="BaseDeDatos\RequerimientosBecario\DAORequerimientosBecario.cs" />
+    <Compile Include="BaseDeDatos\RequerimientosBecario\Editar.cs" />
+    <Compile Include="BaseDeDatos\RequerimientosBecario\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\RequerimientosBecario\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\RequerimientosBecario\Listar.cs" />
+    <Compile Include="BaseDeDatos\TipoBecario\DAOTipoBecario.cs" />
+    <Compile Include="BaseDeDatos\TipoBecario\Editar.cs" />
+    <Compile Include="BaseDeDatos\TipoBecario\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\TipoBecario\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\TipoBecario\Listar.cs" />
+    <Compile Include="BaseDeDatos\TipoCategoriaInvestigador\DAOTipoCategoriaInvestigador.cs" />
+    <Compile Include="BaseDeDatos\TipoCategoriaInvestigador\Editar.cs" />
+    <Compile Include="BaseDeDatos\TipoCategoriaInvestigador\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\TipoCategoriaInvestigador\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\TipoCategoriaInvestigador\Listar.cs" />
+    <Compile Include="BaseDeDatos\TipoProducto\DAOTipoProducto.cs" />
+    <Compile Include="BaseDeDatos\TipoProducto\Editar.cs" />
+    <Compile Include="BaseDeDatos\TipoProducto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\TipoProducto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\TipoProducto\Listar.cs" />
+    <Compile Include="BaseDeDatos\TipoProyecto\DAOTipoProyecto.cs" />
+    <Compile Include="BaseDeDatos\TipoProyecto\Editar.cs" />
+    <Compile Include="BaseDeDatos\TipoProyecto\Eliminar.cs" />
+    <Compile Include="BaseDeDatos\TipoProyecto\Ingresar.cs" />
+    <Compile Include="BaseDeDatos\TipoProyecto\Listar.cs" />
+    <Compile Include="Clases\AreaDeInvestigacion.cs" />
+    <Compile Include="Clases\Becario.cs" />
+    <Compile Include="Clases\CategoriaInvestigador.cs" />
+    <Compile Include="Clases\EstadoProyecto.cs" />
+    <Compile Include="Clases\HistorialCategoria.cs" />
+    <Compile Include="Clases\Hito.cs" />
+    <Compile Include="Clases\Investigador.cs" />
+    <Compile Include="Clases\Mensaje.cs" />
+    <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Proyecto.cs" />
+    <Compile Include="Clases\ProyectoCategorizado.cs" />
+    <Compile Include="Clases\Recursos\Recurso.cs" />
+    <Compile Include="Clases\RequerimientosBecario.cs" />
+    <Compile Include="Clases\TipoBecario.cs" />
+    <Compile Include="Clases\TipoCategoriaInvestigador.cs" />
+    <Compile Include="Clases\TipoProducto.cs" />
+    <Compile Include="Clases\TipoProyecto.cs" />
+    <Compile Include="Gestores\GestorAltaInvestigador.cs" />
+    <Compile Include="JSONs\PublicoJSON.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clases\Tablero.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Clases\Diagrama de Clases.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

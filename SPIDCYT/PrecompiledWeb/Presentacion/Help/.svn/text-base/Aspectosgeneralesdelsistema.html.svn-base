@@ -1,0 +1,230 @@
+﻿<html>
+	
+<head>
+	<title>Aspectos generales del sistema</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.7.1.482">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Manual de Ayuda para el Usuario de SPIDCYT.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Aspectosgeneralesdelsistema");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Aspectos generales del sistema</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DescripcindelSistema.html">Descripci&oacute;n del Sistema</a> &rsaquo;&rsaquo; <a href="Navegacin.html">Navegaci&oacute;n</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Navegacin.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Navegacin.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Nivelesdeusuariosypermisos.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps6"><span class="rvts15">Para lograr que el usuario se sienta cómodo dentro del sistema, se buscó homogeinizar la presentación de la información, como así también hacerla intuitiva. </span></p>
+<p class="rvps6"><span class="rvts15">A continuación se describe la funcionalidad comun para las páginas web y simibología utilizada:</span></p>
+<p class="rvps6"><span class="rvts15"><br/></span></p>
+<p class="rvps8"><span class="rvts14">Funcionalidad común</span></p>
+<p class="rvps6"><span class="rvts22">Menú Principal</span></p>
+<p class="rvps6"><span class="rvts15">Se utiliza para la navegación un menú horizontal con opciones deplegables (que cambian de acuerdo a cada rol).</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem37.png"/></p>
+<p class="rvps6"><span class="rvts22">TABLAS</span></p>
+<p class="rvps6"><span class="rvts15">Mucha de la información se encuentra representada en tablas. Cuando es necesario éstas cuantan con la siguiente funcionalidad: </span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">Buscador: incluye filtro por palabras ofrecidas por el usuarios, en otros casos por el sistemas (representada en combos, o checkboxs) una opción de "Ver todos" para eliminar el filtro.</span></li>
+<li class="rvps6"><span class="rvts15">Ordenamiento: se puede realizar haciendo click sobre cualquier encabezado de columna. </span></li>
+<li class="rvps6"><span class="rvts15">Paginación: cuando la información es demasiada para mostrarse e una sola pantalla, en el pie de tabla puede verse la paginación. </span></li>
+</ul>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem12.png"/></p>
+<p class="rvps6"><span class="rvts22"><br/></span></p>
+<p class="rvps6"><span class="rvts22">ACORDEÓN</span></p>
+<p class="rvps6"><span class="rvts15">El acordeón muestra actividades que pueden ser desplegadas haciendo click sobre el título mostrado en azul oscuro. </span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem28.png"/></p>
+<p class="rvps6"><span class="rvts22"><br/></span></p>
+<p class="rvps6"><span class="rvts22">MENSAJES </span></p>
+<p class="rvps6"><span class="rvts15">Las actividades pueden arrojar 4 tipos de mensajes diferentes, de acuerdo al estado que tiene la misma. Para ello se identifican con un ícono y color acorde al nivel de advertencia. </span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">Mensaje de éxito: </span></li>
+</ul>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem30.png"/></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">Mensaje de información:</span></li>
+</ul>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem29.png"/></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">Mensaje de advertencia: </span></li>
+</ul>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem33.png"/></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">Mensaje de Error:</span></li>
+</ul>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem31.png"/></p>
+<p class="rvps6"><span class="rvts22"><br/></span></p>
+<p class="rvps6"><span class="rvts15">Además existen mensajes de confirmación, reservados para actividades que puedan originar cambios importantes a nivel de datos, por ejemplo cuando se desea eliminar un elemento. </span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem35.png"/></p>
+<p class="rvps6"><span class="rvts22">Botones:</span></p>
+<p class="rvps6"><span class="rvts15">Los botones generales tienen dos estados: habilitado o deshabilitado. </span></p>
+<p class="rvps6"><span class="rvts15">En caso de estar habilitados podemos verlo en color azul, y con animación: </span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem16.png"/></p>
+<p class="rvps6"><span class="rvts15">SI se encuentran deshabiltiados un color gris claro es elegido para dar a conocer la situación:</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem32.png"/></p>
+<p class="rvps6"><span class="rvts15"><br/></span></p>
+<p class="rvps6"><span class="rvts22">Tooltips:</span></p>
+<p class="rvps6"><span class="rvts15">Para ofrecer ayuda en funcionalidades poco convencionales, se agregaron tooltips descriptivas:</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/NewItem34.png"/></p>
+<p class="rvps6"><span class="rvts15"><br/></span></p>
+<p class="rvps8"><span class="rvts14">Símbolos</span></p>
+<p class="rvps6"><span class="rvts15"><br/></span></p>
+<div class="rvps6"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps2"><span class="rvts6">Símbolo</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Descripción</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem13.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Ver Historial</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem14.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Eliminar</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem15.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Editar</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem18.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Ver más: amplia la descripción</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem21.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Ver más (tablas)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem22.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Ver menos (tablas)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img width="23" height="22" alt="" style="padding : 1px;" src="lib/NewItem23.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Exportar archivos a PDF para facilitar la impresión de los mismos. </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem27.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Ver presupuesto</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem16.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Agregar nuevo elemento</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem17.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Botonoes "Imprimir" exportan archivos a PDF para facilitar la impresión de los mismos. </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem20.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Limpiar filtro de búsqueda</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem19.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Aplicar filtro a la búsqueda</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem25.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Confirma una actividad</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem26.png"/></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><p class="rvps2"><span class="rvts6">Cancela una actividad </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><span class="rvts6"><br/></span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; width: 34px;"><p class="rvps13"><span class="rvts6"><br/></span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; width: 1572px;"><br/>
+</td>
+</tr>
+</table>
+</div>
+<p></p>
+<p class="rvps7"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; SPIDCYT. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

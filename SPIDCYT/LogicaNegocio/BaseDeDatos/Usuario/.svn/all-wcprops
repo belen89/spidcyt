@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/465/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/Usuario
+END
+Editar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/465/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/Usuario/Editar.cs
+END
+Ingresar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/434/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/Usuario/Ingresar.cs
+END
+DAOUsuario.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/434/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/Usuario/DAOUsuario.cs
+END
+Listar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/465/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/Usuario/Listar.cs
+END
+Eliminar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/434/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/Usuario/Eliminar.cs
+END

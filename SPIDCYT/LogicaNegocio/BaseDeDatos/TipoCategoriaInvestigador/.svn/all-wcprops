@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/749/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/TipoCategoriaInvestigador
+END
+Editar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/596/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/TipoCategoriaInvestigador/Editar.cs
+END
+Ingresar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/596/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/TipoCategoriaInvestigador/Ingresar.cs
+END
+DAOTipoCategoriaInvestigador.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/596/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/TipoCategoriaInvestigador/DAOTipoCategoriaInvestigador.cs
+END
+Listar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/749/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/TipoCategoriaInvestigador/Listar.cs
+END
+Eliminar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/596/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/TipoCategoriaInvestigador/Eliminar.cs
+END

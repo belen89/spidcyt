@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/899/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/RequerimientosBecario
+END
+Eliminar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/413/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/RequerimientosBecario/Eliminar.cs
+END
+DAORequerimientosBecario.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/899/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/RequerimientosBecario/DAORequerimientosBecario.cs
+END
+Editar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/791/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/RequerimientosBecario/Editar.cs
+END
+Ingresar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/791/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/RequerimientosBecario/Ingresar.cs
+END
+Listar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/410/trunk/src/SPIDCYT/LogicaNegocio/BaseDeDatos/RequerimientosBecario/Listar.cs
+END

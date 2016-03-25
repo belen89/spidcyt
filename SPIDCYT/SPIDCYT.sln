@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proyectos", "Proyectos", "{755200DC-0B73-4B5E-BC60-F907A733A424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Presentacion", "Presentacion\", "{448EE3B5-03B5-4331-AAB7-252E6FDAB544}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "Svn"
+		SccAuxPath = "Svn"
+		SccLocalPath = "Svn"
+		SccProvider = "SubversionScc"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}|LogicNegocio.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Presentacion"
+		Debug.AspNetCompiler.PhysicalPath = "Presentacion\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Presentacion\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Presentacion"
+		Release.AspNetCompiler.PhysicalPath = "Presentacion\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Presentacion\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64916"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectSPIDCYT", "TestProjectSPIDCYT\TestProjectSPIDCYT.csproj", "{F67D0566-3B81-42B4-8D21-AB8EFD47AFBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B4CCF48-F73A-4B57-B27D-9C45C2BCD6F5}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SPIDCYT1.vsmdi = SPIDCYT1.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SPIDCYT1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448EE3B5-03B5-4331-AAB7-252E6FDAB544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448EE3B5-03B5-4331-AAB7-252E6FDAB544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448EE3B5-03B5-4331-AAB7-252E6FDAB544}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{448EE3B5-03B5-4331-AAB7-252E6FDAB544}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F67D0566-3B81-42B4-8D21-AB8EFD47AFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67D0566-3B81-42B4-8D21-AB8EFD47AFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67D0566-3B81-42B4-8D21-AB8EFD47AFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67D0566-3B81-42B4-8D21-AB8EFD47AFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4CF37D4B-6932-43B7-9BF9-8BCFF04CEF83} = {755200DC-0B73-4B5E-BC60-F907A733A424}
+	EndGlobalSection
+EndGlobal

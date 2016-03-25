@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/879/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso
+END
+DeBaja.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/796/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/DeBaja.cs
+END
+ConDemora.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/796/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/ConDemora.cs
+END
+Disponible.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/796/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/Disponible.cs
+END
+Ocupado.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/804/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/Ocupado.cs
+END
+EnReserva.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/796/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/EnReserva.cs
+END
+IEstadoRecurso.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/879/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/IEstadoRecurso.cs
+END
+OcupadoConReserva.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/796/trunk/src/SPIDCYT/LogicaNegocio/Clases/Recursos/EstadoRecurso/OcupadoConReserva.cs
+END

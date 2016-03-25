@@ -1,0 +1,104 @@
+﻿<html>
+	
+<head>
+	<title>Log de Auditor&iacute;a</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.8.0.560">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Manual de Ayuda para el Usuario de SPIDCYT.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("LogdeAuditora");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Log de Auditor&iacute;a</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DescripcindelSistema.html">Descripci&oacute;n del Sistema</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="DescripcindelSistema.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Bitcoradebecario.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps6"><span class="rvts15">Para llevar el control de auditoría, debrá realizarce directamente sobre la el Motor de SQL SERVER que contiene la base de datos.</span></p>
+<p class="rvps6"><span class="rvts15">El administrador podrá obtener la informaci´ñon que necesita siguiendo los apsos para llevar adelante la auditoría. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps8"><span class="rvts14">Procedimientos</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts33">Crear una nueva especificación de auditoría</span></p>
+<p class="rvps2"><span class="rvts32"><br/></span></p>
+<ol style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">En el Explorador de objetos, expanda de forma recursiva el nodo Seguridad hasta Auditorías.</span></li>
+<li class="rvps6"><span class="rvts15">Haga clic con el botón secundario en Auditorías y, a continuación, haga clic en Nueva auditoría. Esto abre la página Crear auditoría.</span></li>
+<li class="rvps6"><span class="rvts15">En el campo Nombre de auditoría, &nbsp;seleccione uno apropiado. Por ejemplo: ServerAuditoriaSPIDCYT.</span></li>
+<li class="rvps6"><span class="rvts15">En Destino de auditoría, elija ApplicationLog en la lista.</span></li>
+<li class="rvps6"><span class="rvts15">Haga clic en Aceptar para aceptar la configuración predeterminada y guardar la nueva especificación de auditoría.</span></li>
+</ol>
+<p class="rvps6"><span class="rvts15"><br/></span></p>
+<p class="rvps6"><span class="rvts22">Crear una especificación de auditoría en el nivel de base de datos</span></p>
+<ol style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">En el Explorador de objetos, expanda de forma recursiva el nodo Bases de datos hasta el nodo Seguridad, éste incluido, para la base de datos SPIDCYT.</span></li>
+<li class="rvps6"><span class="rvts15">Haga clic con el botón secundario en Especificaciones de auditoría de base de datos y, a continuación, haga clic en Nueva especificación de auditoría de base de datos. Esto abre la página Crear especificación de auditoría de base de datos.</span></li>
+<li class="rvps6"><span class="rvts15">En el campo Nombre, escriba AuditoriaSPIDCYT1.</span></li>
+<li class="rvps6"><span class="rvts15">En Auditoría de servidor, elija ServerAuditoriaSPIDCYT en la lista.</span></li>
+<li class="rvps6"><span class="rvts15">En la cuadrícula de la tabla, haga clic en la fila que viene precedida por un asterisco (*). En Tipo de acción de auditoría, elija la que considere apropiada en la lista.</span></li>
+<li class="rvps6"><span class="rvts15">En Nombre de objeto, abra la página Seleccionar objetos.</span></li>
+<li class="rvps6"><span class="rvts15">Haga clic en Examinar para abrir la página Buscar objetos. Utilice este explorador para buscar y seleccionar la tabla que desea utilizar. Haga clic en Aceptar hasta que vuelva a la página Crear especificación de auditoría de base de datos. Observe que la información de Esquema de objeto aparece automáticamente según su selección.</span></li>
+<li class="rvps6"><span class="rvts15">Repita el paso anterior mientas sea necesario. </span></li>
+<li class="rvps6"><span class="rvts15">Haga clic en Aceptar para guardar la especificación de auditoría de base de datos.</span></li>
+<li class="rvps6"><span class="rvts15">Expanda el nodo Auditorías y haga clic con el botón secundario en ServerAuditoriaSPIDCYT. Haga clic en Habilitar auditoría para iniciar la auditoría.</span></li>
+</ol>
+<p class="rvps6"><span class="rvts15"><br/></span></p>
+<p class="rvps6"><span class="rvts34">Para ver un registro de auditoría</span></p>
+<ol style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps6"><span class="rvts15">En el Explorador de objetos, expanda de forma recursiva el nodo Seguridad hasta Auditorías.</span></li>
+<li class="rvps6"><span class="rvts15">Haga clic con el botón secundario del mouse en &nbsp;AuditoriaSPIDCYT1. y, a continuación, haga clic en Ver registros de auditoría. Esta acción abre el Visor del archivo de registro, que puede utilizar para ver el registro de auditoría. Para obtener más información sobre cómo utilizar este visor, haga clic en Ayuda.</span></li>
+<li class="rvps6"><span class="rvts15">Haga clic en Cerrar cuando termine de ver el registro.</span></li>
+</ol>
+<p></p>
+<p class="rvps7"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com">Free EBook and documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; SPIDCYT. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
